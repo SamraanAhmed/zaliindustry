@@ -1,0 +1,90 @@
+/* Base slider container and layout */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.w-hero-slider {
+  width: 18rem; /* 72 * 0.25rem = 18rem */
+  height: 18rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:w-hero-slider-sm {
+    width: 24rem; /* 96 * 0.25rem = 24rem */
+    height: 24rem;
+  }
+}
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; left: 0; right: 0; bottom: 0; }
+.inset-4 { top: 1rem; left: 1rem; right: 1rem; bottom: 1rem; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.overflow-hidden { overflow: hidden; }
+.rounded-full { border-radius: 50%; }
+.rounded-32 { border-radius: 32px; }
+.rounded-xl { border-radius: 0.75rem; }
+.scale-90 { transform: scale(0.9); }
+.scale-100 { transform: scale(1); }
+.scale-110 { transform: scale(1.1); }
+.blur-3xl { filter: blur(64px); }
+.bg-black-5 { background-color: rgba(0, 0, 0, 0.05); }
+.border-light { border: 1px solid #e0e0e0; }
+.bg-light-gray { background-color: #f9f9f9; }
+.object-cover { object-fit: cover; }
+.opacity-0 { opacity: 0; }
+.opacity-100 { opacity: 100; }
+.text-black { color: #000; }
+.text-xs { font-size: 0.75rem; }
+
+/* Transitions */
+.transition-hero-slide {
+  transition: all 1500ms ease-in-out;
+}
+
+.transition-text-slide {
+  transition: all 1000ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.translate-y-0 { transform: translateY(0); }
+.-translate-y-8 { transform: translateY(-2rem); }
+
+/* Animation: Float */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating product tag */
+.product-name-tag {
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 3px solid #000;
+}
+
+.-left-10 { left: -2.5rem; }
+@media (min-width: 640px) {
+  .sm\:-left-20 { left: -5rem; }
+}
+
+.top-70 { top: 70%; }
+.min-w-140 { min-width: 140px; }
+.h-4 { height: 1rem; }
