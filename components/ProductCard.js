@@ -1,6 +1,16 @@
 import Link from 'next/link';
+import { useQuote } from '../context/QuoteContext';
 
 const ProductCard = ({ product }) => {
+  const { addToQuote, quoteItems } = useQuote();
+  const isAdded = quoteItems.find(item => item.id === product.id);
+
+  const handleAdd = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToQuote(product);
+  };
+
   return (
     <div className="product-card">
       <Link href={`/product?id=${product.id}`}>
@@ -12,10 +22,12 @@ const ProductCard = ({ product }) => {
       <div className="product-info">
         <h3 className="product-title">{product.name}</h3>
         <div className="product-actions">
-          <button className="add-btn">Add to Quote List</button>
-          {/* <Link href={`/product?id=${product.id}`} className="view-btn">
-            View Details
-          </Link> */}
+          <button 
+            className={`add-btn ${isAdded ? 'added' : ''}`}
+            onClick={handleAdd}
+          >
+            {isAdded ? 'In Quote List' : 'Add to Quote List'}
+          </button>
         </div>
       </div>
     </div>

@@ -5,16 +5,21 @@ import '../styles/product.css';
 import '../styles/footer.css';
 import '../styles/fabrics.css';
 import '../styles/about.css';
+import '../styles/how-it-works.css';
+import '../styles/contact.css';
 import '../styles/HeroProductSlider.css';
+import { QuoteProvider } from '../context/QuoteContext';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="public\favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <QuoteProvider>
+        <Component {...pageProps} />
+      </QuoteProvider>
     </>
   );
 }

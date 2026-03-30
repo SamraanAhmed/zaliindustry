@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -13,46 +14,53 @@ const Footer = () => {
               className="object-contain"
             />
           </div>
-          <ul>
-            <li>Find a Store</li>
-            <li>Become a Member</li>
-            <li>Send Us Feedback</li>
-          </ul>
+          <p style={{ fontSize: '0.85rem', color: '#888', marginBottom: '2rem', maxWidth: '280px' }}>
+            A materials laboratory dedicated to the science of human movement and performance apparel.
+          </p>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+             {/* Social items would go here but I'll skip icons for time if needed, using text */}
+             <a href="#" style={{ color: '#fff', fontSize: '0.85rem', textDecoration: 'none' }}>INSTAGRAM</a>
+             <a href="#" style={{ color: '#fff', fontSize: '0.85rem', textDecoration: 'none' }}>WHATSAPP</a>
+          </div>
         </div>
+        
         <div className="footer-col">
-          <h4>GET HELP</h4>
+          <h4>SHOP</h4>
           <ul>
-            <li>Order Status</li>
-            <li>Shipping & Delivery</li>
-            <li>Returns</li>
-            <li>Payment Options</li>
+            <li><Link href="/products">ALL PRODUCTS</Link></li>
+            <li><Link href="/products?category=t-shirts">T-SHIRTS</Link></li>
+            <li><Link href="/products?category=shorts">SHORTS</Link></li>
+            <li><Link href="/products?category=sportswear">SPORTSWEAR</Link></li>
           </ul>
         </div>
+
         <div className="footer-col">
-          <h4>ABOUT US</h4>
+          <h4>RESOURCES</h4>
           <ul>
-            <li>News</li>
-            <li>Careers</li>
-            <li>Investors</li>
-            <li>Sustainability</li>
+            <li><Link href="/fabrics">TECHNICAL FABRICS</Link></li>
+            <li><Link href="/how-it-works">PRODUCTION PROCESS</Link></li>
+            <li><Link href="/categories">CATEGORIES</Link></li>
+            <li><Link href="/cart">QUOTE LIST</Link></li>
           </ul>
         </div>
+
         <div className="footer-col">
-          <h4>SOCIAL</h4>
+          <h4>COMPANY</h4>
           <ul>
-            <li>Twitter</li>
-            <li>Facebook</li>
-            <li>YouTube</li>
-            <li>Instagram</li>
+            <li><Link href="/about">OUR STORY</Link></li>
+            <li><Link href="/contact">CONTACT ENQUIRIES</Link></li>
+            <li><Link href="/about#manufacturing">SIALKOT HUB</Link></li>
+            <li><Link href="#">CAREERS (SOON)</Link></li>
           </ul>
         </div>
+
         <div className="footer-bottom">
-          <p>© 2026 Zali Industry, Inc. All Rights Reserved</p>
+          <p>© 2026 ZALI INDUSTRY, INC. ALL RIGHTS RESERVED</p>
           <div className="footer-policies" style={{ display: 'flex', gap: '1rem' }}>
-            <span>Guides</span>
-            <span>Terms of Sale</span>
-            <span>Terms of Use</span>
-            <span>Privacy Policy</span>
+            <span>GUIDES</span>
+            <span>TERMS OF SALE</span>
+            <span>TERMS OF USE</span>
+            <span>PRIVACY POLICY</span>
           </div>
         </div>
       </footer>

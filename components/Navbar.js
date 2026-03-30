@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
-import { FaListUl, FaSearch, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { FaShoppingBag, FaSearch, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { products } from "./ProductData";
+import { useQuote } from "../context/QuoteContext";
 
 const CATEGORIES = [
   { label: "All Products", href: "/products" },
@@ -14,12 +15,13 @@ const CATEGORIES = [
 ];
 
 const NAV_LINKS = [
-  { label: "Fabrics", href: "/fabrics" },
   { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "#" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "How It Works", href: "/how-it-works" },
 ];
 
 export default function Navbar() {
+  const { quoteItems } = useQuote();
   const router = useRouter();
   const pathname = router.pathname;
   const [scrolled, setScrolled] = useState(false);
@@ -182,8 +184,8 @@ export default function Navbar() {
               </button>
               
               <Link href="/cart" aria-label="Quote Request List" className="action-icon-btn">
-                <FaListUl size={15} />
-                <span className="action-icon-badge">0</span>
+                <FaShoppingBag size={15} />
+                <span className="action-icon-badge">{quoteItems.length}</span>
               </Link>
             </div>
           </div>

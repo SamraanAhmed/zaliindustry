@@ -46,28 +46,53 @@ export default function AboutPage() {
             <div className="heritage-text-content">
               <div className="h-space-y">
                 <h2>
-                  Beyond the <span>Ordinary</span>
+                  Direct <span>Manufacturer</span>
                 </h2>
                 <p>
-                  Our journey began with a single question: Why does athletic apparel fail when athletes push hardest? We spent three years in research and development before releasing our first prototype.
+                  At Zali Industry, we eliminate the middleman. We are a direct manufacturer with complete vertical integration, ensuring that every piece of gear is produced under our own roof and shipped directly from our factory to your doorstep.
                 </p>
                 <p className="heritage-subtext">
-                  Today, Zali Industry supplies precision gear to Olympic-level athletes and elite teams globally. Every seam, every fiber, and every weave is calculated to minimize friction and maximize efficiency.
+                  This direct relationship allows us to maintain unparalleled quality control, rapid prototyping, and significantly lower costs for high-performance apparel compared to traditional retail brands.
                 </p>
               </div>
 
               <div className="heritage-stats-grid">
                  <div className="stat-item">
-                    <h4>Scientific Rigor</h4>
-                    <p>We test materials at extreme temperatures and atmospheric pressures to ensure absolute durability.</p>
+                    <h4>No Middlemen</h4>
+                    <p>Transparent pricing and direct-from-origin manufacturing for every order.</p>
                  </div>
                  <div className="stat-item">
                     <h4>Ethical Origin</h4>
-                    <p>Our supply chain is fully transparent, from raw fiber to final inspection in our own facilities.</p>
+                    <p>Absolute transparency—from raw fiber selection to the final quality inspection.</p>
                  </div>
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Manufacturing Source Section */}
+        <section className="manufacturing-hub max-w-7xl" style={{ borderTop: '1px solid #f0f0f0', paddingTop: '6rem', marginBottom: '4rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                <div>
+                   <h2 style={{ fontSize: '3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '2rem' }}>Our Global <span className="text-secondary" style={{ color: '#aaa' }}>Production Hub</span></h2>
+                   <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#444', marginBottom: '2rem' }}>
+                      Operating from our state-of-the-art facility in <strong style={{color: '#000'}}>Sialkot, Pakistan</strong>—the world's capital for sports manufacturing—we utilize advanced machinery and centuries-old craftsmanship to engineer world-class apparel.
+                   </p>
+                   <div style={{ display: 'flex', gap: '2rem' }}>
+                       <div>
+                          <h4 style={{ fontWeight: '900', marginBottom: '0.5rem' }}>Location</h4>
+                          <p style={{ fontSize: '0.9rem', color: '#666' }}>Sialkot, Pakistan</p>
+                       </div>
+                       <div>
+                          <h4 style={{ fontWeight: '900', marginBottom: '0.5rem' }}>Team Experience</h4>
+                          <p style={{ fontSize: '0.9rem', color: '#666' }}>25+ Years of Technical Textile Mastery</p>
+                       </div>
+                   </div>
+                </div>
+                <div style={{ background: '#f5f5f5', borderRadius: '24px', overflow: 'hidden', height: '400px', position: 'relative' }}>
+                    <Image src="/Demo Img/LightGray.png" alt="Zali Factory" fill style={{ objectFit: 'cover' }} />
+                </div>
+            </div>
         </section>
 
         {/* Grid Stats */}
@@ -75,10 +100,10 @@ export default function AboutPage() {
             <div className="max-w-7xl">
               <div className="stats-grid">
                  {[
-                   { val: "24/7", label: "Production Capacity" },
-                   { val: "100%", label: "Moisture Wicking" },
-                   { val: "Odor-X", label: "Tech Integrated" },
-                   { val: "40+", label: "Global Partners" },
+                   { val: "Factory", label: "Direct-to-Customer" },
+                   { val: "100%", label: "In-House Production" },
+                   { val: "Elite", label: "Material Sourcing" },
+                   { val: "Global", label: "Technical Export" },
                  ].map((item, i) => (
                    <div key={i} className="stat-box">
                       <span className="big-val">{item.val}</span>

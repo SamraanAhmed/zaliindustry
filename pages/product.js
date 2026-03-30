@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import { products } from '../components/ProductData';
+import { useQuote } from '../context/QuoteContext';
 
 const FABRICS = [
   { name: 'Chiffon', image: '/Fabrics/Chiffon Fabric.jpg' },
@@ -25,6 +26,7 @@ const DEMO_IMAGES = [
 ];
 
 const ProductDetailPage = () => {
+  const { addToQuote, quoteItems } = useQuote();
   const router = useRouter();
   const { id } = router.query;
   const [activeImage, setActiveImage] = useState('');
@@ -58,6 +60,12 @@ const ProductDetailPage = () => {
   } else {
     relatedProducts = relatedProducts.slice(0, 4);
   }
+
+  const isAdded = quoteItems.find(item => item.id === product.id);
+
+  const handleAdd = () => {
+    addToQuote(product);
+  };
 
   return (
     <>
@@ -120,8 +128,11 @@ const ProductDetailPage = () => {
             </div>
 
             <div className="action-stack">
-                <button className="add-btn-large">
-                    Add to Quote List
+                <button 
+                  className={`add-btn-large ${isAdded ? 'added' : ''}`}
+                  onClick={handleAdd}
+                >
+                    {isAdded ? 'In Quote List' : 'Add to Quote List'}
                 </button>
                 <button className="secondary-btn-large">
                     Save to Wishlist

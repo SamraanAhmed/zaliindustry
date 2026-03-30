@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import CategorySection from '../components/CategorySection';
 import ProductCard from '../components/ProductCard';
 import TestimonialSection from '../components/TestimonialSection';
+import ProcessSection from '../components/ProcessSection';
 import Footer from '../components/Footer';
 import { products } from '../components/ProductData';
 
@@ -34,6 +35,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <ProcessSection />
 
         <TestimonialSection />
       </main>

@@ -7,10 +7,14 @@ const CATEGORIES = [
   { name: 'Accessories', image: '/Demo Img/White.jpg', href: '/products?category=accessories' },
 ];
 
-export default function CategorySection() {
+export default function CategorySection({ showTitle = true }) {
   return (
     <section className="category-section container">
-      <h2 className="section-title">Shop by Category</h2>
+      {showTitle && (
+        <Link href="/categories" className="section-link">
+          <h2 className="section-title hover-link">Shop by Category</h2>
+        </Link>
+      )}
       <div className="category-grid">
         {CATEGORIES.map((cat) => (
           <Link key={cat.name} href={cat.href} className="category-card">
