@@ -11,6 +11,14 @@
   height: 100vh;
 }
 
+@media (max-width: 640px) {
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+    padding-bottom: 2rem;
+  }
+}
+
 .hero-bg-white {
   position: absolute;
   inset: 0;
@@ -34,21 +42,42 @@
 .hero-layout-container {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 5rem 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
 }
 
+/* Hero slider wrapper fills its grid column */
+.hero-slider-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1024px) {
+  /* Show the wrapper — it now holds the mobile carousel */
+  .hero-slider-wrapper {
+    display: block;
+    width: 100%;
+  }
+
   .hero-layout-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 4rem;
+    gap: 2rem;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-layout-container {
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 1.5rem;
   }
 }
 
@@ -60,6 +89,12 @@
   text-transform: uppercase;
   color: #000;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-main-title {
+    font-size: 5.5rem;
+  }
 }
 
 .gradient-text {
@@ -85,15 +120,31 @@
   }
 }
 
+@media (max-width: 640px) {
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+  }
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .hero-actions {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 640px) {
   .hero-actions {
     flex-direction: row;
     justify-content: center;
+    gap: 0.75rem;
   }
 }
 
@@ -108,6 +159,7 @@
   letter-spacing: 0.5px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
 }
 
 .btn-primary-hero:hover {
@@ -125,12 +177,22 @@
   letter-spacing: 0.5px;
   border: 2px solid #e0e0e0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
 }
 
 .btn-secondary-hero:hover {
   border-color: #000;
   transform: translateY(-4px);
   background-color: #fafafa;
+}
+
+@media (max-width: 640px) {
+  .btn-primary-hero,
+  .btn-secondary-hero {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
 }
 
 /* Base animations */
@@ -148,7 +210,25 @@
 }
 
 @media (max-width: 640px) {
-  .hero-main-title { font-size: 4.5rem; }
+  .hero-main-title {
+    font-size: 3.75rem;
+    letter-spacing: -2.5px;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-main-title {
+    font-size: 3.25rem;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-main-title {
+    font-size: 2.9rem;
+    letter-spacing: -1.5px;
+  }
 }
 
 .product-grid {
@@ -215,16 +295,16 @@
 .product-category {
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 10px;
+  bottom: 10px;
   background: #fff;
-  padding: 8px 12px;
-  font-size: 11px;
+  padding: 4px 6px;
+  font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
   color: #000;
-  border-top: 1.5px solid #000;
-  border-right: 1.5px solid #000;
-  border-top-right-radius: 10px;
+  border: 2px solid #000;
+  border-radius: 4px;
   z-index: 5;
   letter-spacing: 0.5px;
 }
@@ -531,6 +611,14 @@
   letter-spacing: -1px;
 }
 
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.5rem;
+    padding: 1.75rem 0 1rem;
+    letter-spacing: -0.5px;
+  }
+}
+
 .section-link {
   text-decoration: none;
   display: block;
@@ -619,6 +707,12 @@
   box-shadow: 0 10px 40px rgba(0,0,0,0.03);
 }
 
+@media (max-width: 640px) {
+  .testimonial-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
 .q-mark {
   position: absolute;
   top: 1rem;
@@ -658,6 +752,13 @@
 @media (max-width: 992px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-section {
+    padding: 1rem 0;
   }
 }
 
@@ -826,6 +927,14 @@
   gap: 1.5rem;
 }
 
+@media (max-width: 640px) {
+  .spec-list-card {
+    padding: 1.5rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
 .spec-tag {
   display: flex;
   align-items: center;
@@ -914,6 +1023,15 @@
   .specs-row {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .specs-row {
+    gap: 1.5rem;
+  }
+  .process-section {
+    padding: 0.5rem 10px;
   }
 }
 

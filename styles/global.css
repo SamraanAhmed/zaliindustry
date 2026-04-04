@@ -29,7 +29,12 @@ header, footer, main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  /* background-color: red; */
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 a {
