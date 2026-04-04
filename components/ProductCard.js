@@ -31,64 +31,34 @@ const ProductCard = ({ product }) => {
         </Link>
         <div className="product-info">
           <h3 className="product-title">{product.name}</h3>
-          <div className="product-actions">
+          <div className="product-actions" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', width: '100%' }}>
             <button 
               className={`add-btn ${isAdded ? 'added' : ''}`}
               onClick={handleAdd}
+              style={{ padding: '0.8rem', fontSize: '0.85rem' }}
             >
               {isAdded ? 'Already in Cart' : 'Add to Cart'}
             </button>
             <button 
               className="request-quote-btn"
               onClick={handleOpenQuote}
+              style={{ 
+                width: '100%', 
+                padding: '0.8rem', 
+                borderRadius: '8px', 
+                background: '#ff3c00', 
+                color: '#fff', 
+                fontWeight: '900', 
+                border: 'none', 
+                cursor: 'pointer',
+                fontSize: '0.85rem',
+                textTransform: 'uppercase'
+              }}
             >
               Request Quote
             </button>
           </div>
         </div>
-
-        <style jsx>{`
-          .product-actions {
-            display: flex;
-            gap: 0.5rem;
-            width: 100%;
-          }
-          .add-btn, .request-quote-btn {
-            flex: 1;
-            padding: 0.8rem 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            white-space: nowrap;
-          }
-          .add-btn {
-            background: #000;
-            color: #fff;
-          }
-          .add-btn.added {
-            background: #eee;
-            color: #888;
-            cursor: default;
-          }
-          .request-quote-btn {
-             background: #ff3c00;
-             color: #fff;
-          }
-          
-          @media (max-width: 480px) {
-            .product-actions {
-              flex-direction: column;
-            }
-            .add-btn, .request-quote-btn {
-              padding: 1rem;
-              font-size: 0.85rem;
-            }
-          }
-        `}</style>
       </div>
 
       <ProductQuoteModal 

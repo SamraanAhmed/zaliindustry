@@ -13,7 +13,7 @@ export function QuoteProvider({ children }) {
       try {
         setQuoteItems(JSON.parse(savedQuote));
       } catch (e) {
-        console.error("Failed to parse quote list", e);
+        console.error("Failed to parse cart", e);
       }
     }
   }, []);
@@ -35,10 +35,10 @@ export function QuoteProvider({ children }) {
   const addToQuote = (product) => {
     setQuoteItems((prev) => {
       if (prev.find(item => item.id === product.id)) {
-        showToast(`"${product.name}" is already in your quote list.`);
+        showToast(`"${product.name}" is already in your cart.`);
         return prev;
       }
-      showToast(`Added "${product.name}" to your quote list!`);
+      showToast(`Added "${product.name}" to your cart!`);
       return [...prev, product];
     });
   };
