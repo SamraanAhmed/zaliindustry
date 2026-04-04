@@ -115,12 +115,14 @@ export default function QuoteModal({ isOpen, onClose, items }) {
         .quote-modal-content {
           background: #fff;
           width: 100%;
-          max-width: 1000px;
-          min-height: 500px;
+          max-width: 900px;
+          max-height: 90vh;
           border-radius: 20px;
           position: relative;
           box-shadow: 0 40px 100px rgba(0,0,0,0.15);
-          overflow: hidden;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
           animation: modalSlideUp 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
         @keyframes modalSlideUp {
@@ -144,8 +146,10 @@ export default function QuoteModal({ isOpen, onClose, items }) {
         }
         .quote-modal-summary {
           background: #fafafa;
-          padding: 3rem;
+          padding: 2.5rem;
           border-right: 1px solid #eee;
+          display: flex;
+          flex-direction: column;
         }
         .quote-modal-form {
           padding: 3rem;
@@ -160,7 +164,17 @@ export default function QuoteModal({ isOpen, onClose, items }) {
         .modal-items-list {
           display: flex;
           flex-direction: column;
-          gap: 1.5rem;
+          gap: 1.25rem;
+          max-height: 450px;
+          overflow-y: auto;
+          padding-right: 1rem;
+        }
+        .modal-items-list::-webkit-scrollbar {
+          width: 4px;
+        }
+        .modal-items-list::-webkit-scrollbar-thumb {
+          background: #ddd;
+          border-radius: 10px;
         }
         .modal-item-mini {
           display: flex;
@@ -249,20 +263,23 @@ export default function QuoteModal({ isOpen, onClose, items }) {
           transform: translateY(-2px);
         }
         .quote-success-view {
-          padding: 5rem;
+          padding: 4rem 2rem;
           text-align: center;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          height: 100%;
+          min-height: 400px;
+          width: 100%;
         }
         @media (max-width: 768px) {
           .quote-form-layout {
             grid-template-columns: 1fr;
           }
           .quote-modal-summary {
-            display: none;
+            padding: 2rem;
+            border-right: none;
+            border-bottom: 1px solid #eee;
           }
           .form-grid {
             grid-template-columns: 1fr;
@@ -275,7 +292,14 @@ export default function QuoteModal({ isOpen, onClose, items }) {
           }
           .quote-modal-content {
             border-radius: 0;
+            max-height: 100vh;
             height: 100%;
+          }
+          .quote-modal-form {
+            padding: 2rem;
+          }
+          .modal-items-list {
+            max-height: 250px;
           }
         }
       `}</style>

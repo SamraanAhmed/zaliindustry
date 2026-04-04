@@ -9,6 +9,7 @@ import '../styles/how-it-works.css';
 import '../styles/contact.css';
 import '../styles/HeroProductSlider.css';
 import '../styles/prodCardBorder.css';
+import '../styles/ProductQuoteModal.css';
 import { QuoteProvider } from '../context/QuoteContext';
 
 export default function App({ Component, pageProps }) {

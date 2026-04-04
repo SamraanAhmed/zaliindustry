@@ -1,0 +1,157 @@
+.pq-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.pq-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+}
+
+.pq-modal-content {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh;
+  border-radius: 24px;
+  position: relative;
+  box-shadow: 0 50px 150px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  padding: 2.5rem;
+  animation: pqModalIn 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes pqModalIn {
+  from { transform: scale(0.9) translateY(40px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.pq-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.pq-modal-close:hover {
+  color: #000;
+}
+
+/* Product Header in Modal */
+.pq-product-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid #f0f0f0;
+}
+
+.pq-product-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.pq-product-info h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.pq-product-info span {
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Form Styling */
+.pq-main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pq-input-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.pq-input-group label svg {
+  color: #000;
+}
+
+.pq-input-group input, 
+.pq-input-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background: #fdfdfd;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.pq-input-group input:focus, 
+.pq-input-group textarea:focus {
+  border-color: #000;
+}
+
+.pq-submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Success View */
+.pq-success-view {
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pq-success-view h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.pq-success-view p {
+  line-height: 1.6;
+  color: #666;
+}

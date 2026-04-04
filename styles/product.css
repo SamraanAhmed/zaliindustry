@@ -241,8 +241,8 @@
 @media (max-width: 640px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-    padding: 2rem 1rem !important;
+    gap: 0.75rem !important;
+    padding: 1.5rem 0rem !important;
   }
 }
 
@@ -1047,6 +1047,18 @@
   gap: 3rem;
   padding: 6rem 2rem 5rem;
   align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .shop-page-container {
+    padding: 4rem 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .shop-page-container {
+    padding: 2.5rem 0.5rem 2rem;
+  }
 }
 
 .shop-sidebar {
