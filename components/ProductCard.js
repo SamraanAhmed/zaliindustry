@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useQuote } from '../context/QuoteContext';
+import { FaShoppingBag } from 'react-icons/fa';
 import ProductQuoteModal from './ProductQuoteModal';
 
 const ProductCard = ({ product }) => {
@@ -31,28 +32,45 @@ const ProductCard = ({ product }) => {
         </Link>
         <div className="product-info">
           <h3 className="product-title">{product.name}</h3>
-          <div className="product-actions" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', width: '100%' }}>
+          <div className="product-actions" style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem', width: '100%', marginTop: 'auto', paddingTop: '1rem' }}>
             <button 
               className={`add-btn ${isAdded ? 'added' : ''}`}
               onClick={handleAdd}
-              style={{ padding: '0.8rem', fontSize: '0.85rem' }}
+              style={{ 
+                flex: '0 0 auto',
+                width: '45px',
+                height: '45px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '0',
+                borderRadius: '8px',
+                background: isAdded ? '#444' : '#000',
+                color: '#fff',
+                fontSize: '1.1rem'
+              }}
+              title={isAdded ? 'Added to Cart' : 'Add to Cart'}
             >
-              {isAdded ? 'Already in Cart' : 'Add to Cart'}
+              <FaShoppingBag />
             </button>
             <button 
               className="request-quote-btn"
               onClick={handleOpenQuote}
               style={{ 
-                width: '100%', 
-                padding: '0.8rem', 
+                flex: '1', 
+                height: '45px',
+                padding: '0 1rem', 
                 borderRadius: '8px', 
-                background: '#ff3c00', 
-                color: '#fff', 
-                fontWeight: '900', 
-                border: 'none', 
+                background: '#fff', 
+                color: '#000', 
+                fontWeight: '800', 
+                border: '1px solid #000', 
                 cursor: 'pointer',
                 fontSize: '0.85rem',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               Request Quote

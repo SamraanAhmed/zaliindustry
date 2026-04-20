@@ -9,8 +9,12 @@ const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredProducts, setFilteredProducts] = useState(products);
 
-  // Get unique categories
+  // Get unique categories and counts
   const categories = ['All', ...new Set(products.map(p => p.category))];
+  const categoryCounts = categories.reduce((acc, cat) => {
+    acc[cat] = cat === 'All' ? products.length : products.filter(p => p.category === cat).length;
+    return acc;
+  }, {});
 
   useEffect(() => {
     if (selectedCategory === 'All') {
@@ -40,7 +44,8 @@ const ProductsPage = () => {
                   className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
                   onClick={() => setSelectedCategory(cat)}
                 >
-                  {cat}
+                  <span className="filter-label">{cat}</span>
+                  <span className="filter-count">{categoryCounts[cat]}</span>
                 </button>
               </li>
             ))}

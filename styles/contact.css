@@ -1,5 +1,4 @@
 .contact-page {
-  padding-top: 10rem;
   padding-bottom: 8rem;
   background: #fff;
 }
@@ -56,14 +55,13 @@
 .c-icon-circle {
   width: 60px;
   height: 60px;
-  background: #000;
-  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  transition: all 0.3s;
 }
 
 .contact-card-box h3 {
@@ -141,7 +139,25 @@
 
 @media (max-width: 1024px) {
   .contact-grid-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 4rem;
+  }
+  .contact-card-box {
+    padding: 1.5rem 0.5rem;
+    gap: 1rem;
+  }
+  .c-icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  .contact-card-box h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0;
+  }
+  .contact-card-box p {
+    display: none;
   }
   .factory-location-section {
     grid-template-columns: 1fr;

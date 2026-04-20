@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaInstagram, FaWhatsapp, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -17,10 +18,19 @@ const Footer = () => {
           <p style={{ fontSize: '0.85rem', color: '#888', marginBottom: '2rem', maxWidth: '280px' }}>
             A materials laboratory dedicated to the science of human movement and performance apparel.
           </p>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-             {/* Social items would go here but I'll skip icons for time if needed, using text */}
-             <a href="#" style={{ color: '#fff', fontSize: '0.85rem', textDecoration: 'none' }}>INSTAGRAM</a>
-             <a href="#" style={{ color: '#fff', fontSize: '0.85rem', textDecoration: 'none' }}>WHATSAPP</a>
+          <div className="footer-socials" style={{ display: 'flex', gap: '1.25rem' }}>
+             <a href="#" className="social-icon-link" aria-label="Instagram">
+               <FaInstagram size={20} />
+             </a>
+             <a href="#" className="social-icon-link" aria-label="WhatsApp">
+               <FaWhatsapp size={20} />
+             </a>
+             <a href="#" className="social-icon-link" aria-label="Facebook">
+               <FaFacebookF size={18} />
+             </a>
+             <a href="#" className="social-icon-link" aria-label="LinkedIn">
+               <FaLinkedinIn size={18} />
+             </a>
           </div>
         </div>
         

@@ -46,7 +46,7 @@ const PANELS = [
 
 /* ─── Desktop: Expandable Accordion ─────────────────────── */
 function DesktopAccordion() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   return (
     <div className="expand-panels-root">
@@ -62,7 +62,6 @@ function DesktopAccordion() {
             <img src={panel.image} alt={panel.name} className="expand-panel__img" />
             <div className="expand-panel__overlay" />
           </div>
-          <span className="expand-panel__num">{panel.label}</span>
           <div className="expand-panel__content">
             <span className="expand-panel__tag">{panel.tag}</span>
             <h3 className="expand-panel__name">{panel.name}</h3>

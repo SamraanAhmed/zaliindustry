@@ -9,7 +9,7 @@ export default function ContactPage() {
       title: "WhatsApp Direct",
       desc: "Instant technical support and order inquiries.",
       btnText: "Start Chat",
-      icon: <FaWhatsapp />,
+      icon: <FaWhatsapp size={24} color="#25D366" />,
       href: "https://wa.me/#",
       color: "#25D366"
     },
@@ -17,15 +17,15 @@ export default function ContactPage() {
         title: "Technical Email",
         desc: "Send us your tech packs and bulk order RFQs.",
         btnText: "Send Email",
-        icon: <FaEnvelope />,
+        icon: <FaEnvelope size={22} color="#111" />,
         href: "mailto:support@zaliindustry.com",
-        color: "#000"
+        color: "#111"
     },
     {
         title: "Instagram",
         desc: "Follow our daily manufacturing operations and gear drops.",
         btnText: "Follow Us",
-        icon: <FaInstagram />,
+        icon: <FaInstagram size={24} color="#E1306C" />,
         href: "https://instagram.com/zaliindustry",
         color: "#E1306C"
     }
@@ -50,7 +50,7 @@ export default function ContactPage() {
         <div className="contact-grid-main">
             {CONTACT_CARDS.map((card, i) => (
                 <a key={i} href={card.href} target="_blank" rel="noopener noreferrer" className="contact-card-box">
-                    <div className="c-icon-circle">
+                    <div className="c-icon-circle" style={{ backgroundColor: `${card.color}15`, color: card.color }}>
                         {card.icon}
                     </div>
                     <h3>{card.title}</h3>
