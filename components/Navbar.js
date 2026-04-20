@@ -14,10 +14,15 @@ const CATEGORIES = [
   { label: "Accessories", href: "/products?category=accessories" },
 ];
 
+const HOW_IT_WORKS_LINKS = [
+  { label: "For Suppliers", href: "/how-it-works/supplier" },
+  { label: "For Brands", href: "/how-it-works/brand" },
+  { label: "For Individuals", href: "/how-it-works/individual" },
+];
+
 const NAV_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
-  { label: "How It Works", href: "/how-it-works" },
 ];
 
 export default function Navbar() {
@@ -27,7 +32,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [howItWorksDropdownOpen, setHowItWorksDropdownOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileHowItWorksOpen, setMobileHowItWorksOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -45,7 +52,9 @@ export default function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false);
     setProductsDropdownOpen(false);
+    setHowItWorksDropdownOpen(false);
     setMobileProductsOpen(false);
+    setMobileHowItWorksOpen(false);
     setSearchOpen(false);
   }, [pathname]);
 
@@ -68,6 +77,7 @@ export default function Navbar() {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setProductsDropdownOpen(false);
+        setHowItWorksDropdownOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -139,6 +149,38 @@ export default function Navbar() {
                             className="dropdown-menu-link"
                           >
                             {cat.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* How It Works Dropdown */}
+                  <div className="dropdown-relative" ref={dropdownRef}>
+                    <button
+                      onClick={() => setHowItWorksDropdownOpen(!howItWorksDropdownOpen)}
+                      className={`nav-pill-link ${pathname.startsWith("/how-it-works") ? "active" : "inactive"}`}
+                      aria-expanded={howItWorksDropdownOpen}
+                      aria-haspopup="true"
+                    >
+                      How It Works
+                      <FaChevronDown 
+                        size={10} 
+                        className={`transition-transform ${howItWorksDropdownOpen ? "rotate-180" : ""}`} 
+                      />
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    <div className={`dropdown-menu-container ${howItWorksDropdownOpen ? "open" : "closed"}`}>
+                      <div style={{ padding: '0.25rem 0' }}>
+                        {HOW_IT_WORKS_LINKS.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setHowItWorksDropdownOpen(false)}
+                            className="dropdown-menu-link"
+                          >
+                            {link.label}
                           </Link>
                         ))}
                       </div>
@@ -288,6 +330,39 @@ export default function Navbar() {
                         className="mobile-accordion-link"
                       >
                         {cat.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile How It Works Accordion */}
+            <div className="mobile-accordion-container">
+              <button
+                onClick={() => setMobileHowItWorksOpen(!mobileHowItWorksOpen)}
+                className="mobile-accordion-btn"
+                aria-expanded={mobileHowItWorksOpen}
+              >
+                <span className={`mobile-accordion-label ${pathname.startsWith("/how-it-works") ? "active-text" : "text-black"}`}>
+                  How It Works
+                </span>
+                <div className={`mobile-accordion-icon-wrapper ${mobileHowItWorksOpen ? "open" : ""}`}>
+                  <FaChevronDown size={12} className={mobileHowItWorksOpen ? "active-icon" : "inactive-icon"} />
+                </div>
+              </button>
+              
+              <div className={`mobile-accordion-content ${mobileHowItWorksOpen ? "open" : "closed"}`}>
+                <div className="mobile-accordion-inner">
+                  <div className="mobile-accordion-links">
+                    {HOW_IT_WORKS_LINKS.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="mobile-accordion-link"
+                      >
+                        {link.label}
                       </Link>
                     ))}
                   </div>
