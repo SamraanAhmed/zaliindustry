@@ -10,7 +10,9 @@ import '../styles/contact.css';
 import '../styles/HeroProductSlider.css';
 import '../styles/prodCardBorder.css';
 import '../styles/ProductQuoteModal.css';
+import '../styles/whatsapp.css';
 import { QuoteProvider } from '../context/QuoteContext';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,6 +23,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <QuoteProvider>
         <Component {...pageProps} />
+        <WhatsAppButton />
       </QuoteProvider>
     </>
   );
