@@ -1,0 +1,524 @@
+[
+  {
+    "id": 1,
+    "slug": "cargo-jogger-pants",
+    "name": "Wide-Leg Cargo Sweatpants",
+    "folderName": "Cargo_Jogger_Pants",
+    "gender": "female",
+    "description": "Heavyweight fleece/jersey fabric in black, soft hand feel with durable structure.\nRelaxed full-length wide-leg fit with elasticated waistband; angled front slash pockets, oversized asymmetrical flap cargo pockets, and rear patch pockets with flap detail.\nVisible seam piping and panel lines for a structured utilitarian look; reinforced pocket construction for daily wear.\nCustomizable in fabric colors, prints, trims, and logo placement on legs, pockets, or back.\nSizes XXS–XXL; MOQ 100 pcs.",
+    "image": "/products/cargo-jogger-pants/01_flat_lay.png",
+    "images": [
+      "/products/cargo-jogger-pants/01_flat_lay.png",
+      "/products/cargo-jogger-pants/02_ghost_front.png",
+      "/products/cargo-jogger-pants/03_ghost_back.png",
+      "/products/cargo-jogger-pants/04_ghost_side.png",
+      "/products/cargo-jogger-pants/05_model_front.png"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "casual-walking-shorts",
+    "name": "Custom Color-Block Performance Shorts",
+    "folderName": "Casual_Walking_Shorts",
+    "gender": "male",
+    "description": "Lightweight polyester knit construction with a split color-block layout: light gray on the left side and teal on the right side.\nElastic waistband, hemmed leg openings, smooth front paneling with no visible pockets, and athletic fit for unrestricted movement and durable daily wear.\nCustomizable colors, sublimated numbers, wordmarks, and logos on front and back panels.\nAvailable in youth and adult sizing.\nMOQ: 10 units.",
+    "image": "/products/casual-walking-shorts/01_flat_lay.png",
+    "images": [
+      "/products/casual-walking-shorts/01_flat_lay.png",
+      "/products/casual-walking-shorts/02_ghost_front.png",
+      "/products/casual-walking-shorts/03_ghost_back.png",
+      "/products/casual-walking-shorts/04_ghost_side.png",
+      "/products/casual-walking-shorts/05_model_front.png"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "coach-jacket",
+    "name": "Lightweight Snap-Front Coach Jacket",
+    "folderName": "Coach_Jacket",
+    "gender": "male",
+    "description": "Lightweight matte nylon-like outer fabric with smooth lining.\nClassic coach jacket fit with point collar, full snap-button front, elastic cuffs, straight hem, and adjustable drawcord for a secure fit and easy layering.\nDurable construction with reinforced seams; custom colors, solid or all-over prints, and logo placement on chest, back, or sleeves.\nSizes: XS–3XL.\nMOQ: 50 pcs.",
+    "image": "/products/coach-jacket/01_flat_lay.png",
+    "images": [
+      "/products/coach-jacket/01_flat_lay.png",
+      "/products/coach-jacket/02_ghost_front.png",
+      "/products/coach-jacket/03_ghost_back.png",
+      "/products/coach-jacket/04_ghost_side.png",
+      "/products/coach-jacket/05_model_front.png"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "crew-neck-sweatshirt",
+    "name": "Crewneck Sweatshirt with Raglan Sleeves",
+    "folderName": "Crew_Neck_Sweatshirt",
+    "gender": "male",
+    "description": "Custom crewneck sweatshirt in performance knit or fleece fabric with ribbed collar, cuffs, and hem.\nRaglan sleeve fit allows ease of movement; durable construction with full-print sublimation and rib trim.\nCustomizable colors, sleeve graphics, chest logo, lower front text, and wordmark pattern on bottom band.\nAvailable in youth and adult sizes.\nMOQ: 10 pieces.",
+    "image": "/products/crew-neck-sweatshirt/01_flat_lay.png",
+    "images": [
+      "/products/crew-neck-sweatshirt/01_flat_lay.png",
+      "/products/crew-neck-sweatshirt/02_ghost_front.png",
+      "/products/crew-neck-sweatshirt/03_ghost_back.png",
+      "/products/crew-neck-sweatshirt/04_ghost_side.png",
+      "/products/crew-neck-sweatshirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "crew-neck-short-sleeve-t-shirt",
+    "name": "Short-Sleeve Crew Neck Athletic T-Shirt with Asymmetrical Color Block",
+    "folderName": "Crew_neck_short_sleeve_T-shirt",
+    "gender": "male",
+    "description": "Lightweight performance polyester fabric with moisture-wicking construction.\nShort-sleeve crew neck fit with an asymmetrical dark charcoal, light gray, and medium gray color-block front; curved chest band and angled shoulder/chest streaks; built for training, team wear, and repeated wash use.\nCustom colors, full sublimation or printed graphics, and logo placement on chest, sleeves, back, or neck.\nSizes available from youth to adult plus sizes.\nMOQ: 10 pieces.",
+    "image": "/products/crew-neck-short-sleeve-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/crew-neck-short-sleeve-t-shirt/01_flat_lay.png",
+      "/products/crew-neck-short-sleeve-t-shirt/02_ghost_front.png",
+      "/products/crew-neck-short-sleeve-t-shirt/03_ghost_back.png",
+      "/products/crew-neck-short-sleeve-t-shirt/04_ghost_side.png",
+      "/products/crew-neck-short-sleeve-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "crop-t-shirt",
+    "name": "Loose-Fit Cropped Jersey T-Shirt",
+    "folderName": "Crop_T-Shirt",
+    "gender": "female",
+    "description": "Smooth knit jersey fabric in a soft pastel lavender color.\nLoose fit with cropped length, wide boat neckline, dropped shoulders, elbow-length oversized sleeves, plain front, and slightly uneven hem; built for comfort and easy movement with clean seam construction for durability.\nCustomizable in colors, all-over or placed prints, and logo placement on front, back, or sleeves.\nSizes: XS–XXL.\nMOQ: 50 pcs.",
+    "image": "/products/crop-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/crop-t-shirt/01_flat_lay.png",
+      "/products/crop-t-shirt/02_ghost_front.png",
+      "/products/crop-t-shirt/03_ghost_back.png",
+      "/products/crop-t-shirt/04_ghost_side.png",
+      "/products/crop-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "cuban-collar-shirt",
+    "name": "Short-Sleeve Camp-Collar Button-Up Shirt with Tropical Beach Print",
+    "folderName": "Cuban_Collar_Shirt",
+    "gender": "male",
+    "description": "Lightweight woven performance fabric with a smooth hand feel and allover sublimated print.\nShort-sleeve camp-collar button-up fit with curved hem, rolled sleeve cuffs, breathable comfort, and colorfast durability.\nCustomizable base colors, full-print artwork, and logo placement on chest, sleeve, back, or hem.\nAvailable in adult sizes XS–5XL.\nMOQ: 50 pcs.",
+    "image": "/products/cuban-collar-shirt/01_flat_lay.png",
+    "images": [
+      "/products/cuban-collar-shirt/01_flat_lay.png",
+      "/products/cuban-collar-shirt/02_ghost_front.png",
+      "/products/cuban-collar-shirt/03_ghost_back.png",
+      "/products/cuban-collar-shirt/04_ghost_side.png",
+      "/products/cuban-collar-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "fleece-hoodie",
+    "name": "Pullover Performance Hoodie with Patterned Sleeves",
+    "folderName": "Fleece_Hoodie",
+    "gender": "male",
+    "description": "Smooth performance-knit body with contrasting royal blue patterned sleeves and hood lining.\nPullover athletic fit with kangaroo pocket, black drawcord hood, and front chest graphic; built for mobility and repeated wear.\nAvailable with custom colors, all-over prints, sleeve/hood patterns, and logo or text placement on chest, sleeves, hood, and back.\nSizes available from youth to adult.\nMOQ: 10 pieces",
+    "image": "/products/fleece-hoodie/01_flat_lay.png",
+    "images": [
+      "/products/fleece-hoodie/01_flat_lay.png",
+      "/products/fleece-hoodie/02_ghost_front.png",
+      "/products/fleece-hoodie/03_ghost_back.png",
+      "/products/fleece-hoodie/04_ghost_side.png",
+      "/products/fleece-hoodie/05_model_front.png"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "full-zip-hoodie",
+    "name": "Full-Zip Knit Fleece Hoodie",
+    "folderName": "Full_Zip_Hoodie",
+    "gender": "female",
+    "description": "Smooth knit fleece fabric in navy blue; shown layered over a white crew-neck T-shirt.\nFull-zip design with attached hood and matching drawcords, long sleeves, ribbed cuffs and hem, and split kangaroo front pockets; regular fit for everyday wear and durable rib trim for shape retention.\nCustom options include color changes, all-over or panel prints, and logo placement on chest, sleeve, back, or hood.\nSizes available from XS–3XL.\nMOQ: 50 pieces.",
+    "image": "/products/full-zip-hoodie/01_flat_lay.png",
+    "images": [
+      "/products/full-zip-hoodie/01_flat_lay.png",
+      "/products/full-zip-hoodie/02_ghost_front.png",
+      "/products/full-zip-hoodie/03_ghost_back.png",
+      "/products/full-zip-hoodie/04_ghost_side.png",
+      "/products/full-zip-hoodie/05_model_front.png"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "henley-t-shirt-button-placket",
+    "name": "Short-Sleeve Henley T-Shirt with Chest Pocket",
+    "folderName": "Henley_T-Shirt_button_placket",
+    "gender": "male",
+    "description": "Fabric: soft knit performance jersey or cotton-blend fabric, available in custom weights and compositions.\nFeatures: regular fit, short sleeves, round neckline, three-button placket, left chest patch pocket, tonal embroidery option, reinforced stitching for daily wear.\nCustomization: solid colors or custom prints, pocket and placket details, logo placement on chest, sleeve, back neck, or hem.\nSizing: available in full men’s, women’s, and youth size ranges.\nMOQ: low minimum order quantity available based on fabric and decoration method.",
+    "image": "/products/henley-t-shirt-button-placket/01_flat_lay.png",
+    "images": [
+      "/products/henley-t-shirt-button-placket/01_flat_lay.png",
+      "/products/henley-t-shirt-button-placket/02_ghost_front.png",
+      "/products/henley-t-shirt-button-placket/03_ghost_back.png",
+      "/products/henley-t-shirt-button-placket/04_ghost_side.png",
+      "/products/henley-t-shirt-button-placket/05_model_front.png"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "jogger-pants",
+    "name": "Straight-Leg Lounge Pants with Drawstring Waist",
+    "folderName": "Jogger_Pants",
+    "gender": "male",
+    "description": "Lightweight woven fabric with a soft hand feel.\nRelaxed straight-leg fit with elastic waistband, exposed drawstring, side slash pockets, and plain hems for everyday comfort and easy movement.\nCustomizable in solid colors or printed patterns, with logo placement on hip, thigh, or back waist.\nAvailable in full size range from XS–XXL.\nMOQ: 100 pcs.",
+    "image": "/products/jogger-pants/01_flat_lay.png",
+    "images": [
+      "/products/jogger-pants/01_flat_lay.png",
+      "/products/jogger-pants/02_ghost_front.png",
+      "/products/jogger-pants/03_ghost_back.png",
+      "/products/jogger-pants/04_ghost_side.png",
+      "/products/jogger-pants/05_model_front.png"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "long-sleeve-crew-neck-t-shirt",
+    "name": "Long-Sleeve Crew Neck Performance Jersey with Asymmetrical Color Blocking",
+    "folderName": "Long_Sleeve_Crew_Neck_T-Shirt",
+    "gender": "male",
+    "description": "Lightweight performance polyester fabric with moisture-wicking finish.\nLong-sleeve crew neck fit with asymmetrical black, orange, and white color-block design, curved chest stripe panels, and tonal dot texture detail; built for mobility and durable sublimated color.\nCustomizable in colors, printed graphics, names, numbers, and logo placement on front, back, and sleeves.\nAvailable in youth and adult sizes from XS–3XL.\nMOQ: 10 pieces.",
+    "image": "/products/long-sleeve-crew-neck-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/long-sleeve-crew-neck-t-shirt/01_flat_lay.png",
+      "/products/long-sleeve-crew-neck-t-shirt/02_ghost_front.png",
+      "/products/long-sleeve-crew-neck-t-shirt/03_ghost_back.png",
+      "/products/long-sleeve-crew-neck-t-shirt/04_ghost_side.png",
+      "/products/long-sleeve-crew-neck-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "long-sleeve-v-neck-t-shirt",
+    "name": "Long-Sleeve Athletic Jersey with Raglan Panels",
+    "folderName": "Long_Sleeve_V-Neck_T-Shirt",
+    "gender": "male",
+    "description": "Polyester performance knit fabric with a lightweight, breathable feel.\nLong-sleeve athletic fit with raglan-style shoulder panels, V-neck collar, and piping detail; built for movement and durable for repeated wear.\nCustom colors, numbers, names, prints, and chest logo placement available.\nSizes available from youth to adult.\nMOQ: 10 pieces",
+    "image": "/products/long-sleeve-v-neck-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/long-sleeve-v-neck-t-shirt/01_flat_lay.png",
+      "/products/long-sleeve-v-neck-t-shirt/02_ghost_front.png",
+      "/products/long-sleeve-v-neck-t-shirt/03_ghost_back.png",
+      "/products/long-sleeve-v-neck-t-shirt/04_ghost_side.png",
+      "/products/long-sleeve-v-neck-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "masked-dri-fit-hoodie",
+    "name": "Long-Sleeve Hooded Performance Shirt with Integrated Face Gaiter",
+    "folderName": "Masked_Dri-Fit_Hoodie",
+    "gender": "male",
+    "description": "Lightweight performance fabric with sublimated light beige/tan camouflage print and olive green/brown abstract blotches.\nLoose athletic fit with hood, internal face-covering neck gaiter, self cuffs, and gothic-style chest text; designed for breathable coverage and durable print retention.\nCustom colors, camouflage patterns, all-over prints, and logo/text placement on chest, sleeves, hood, and back.\nSizes available from youth to adult plus sizes.\nMOQ: 10 pieces.",
+    "image": "/products/masked-dri-fit-hoodie/01_flat_lay.png",
+    "images": [
+      "/products/masked-dri-fit-hoodie/01_flat_lay.png",
+      "/products/masked-dri-fit-hoodie/02_ghost_front.png",
+      "/products/masked-dri-fit-hoodie/03_ghost_back.png",
+      "/products/masked-dri-fit-hoodie/04_ghost_side.png",
+      "/products/masked-dri-fit-hoodie/05_model_front.png"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "men-tank-top",
+    "name": "Custom Sleeveless Tank Top with Chest Print",
+    "folderName": "Men_Tank_Top",
+    "gender": "male",
+    "description": "Smooth solid performance fabric construction.\nSleeveless tank top with a classic scoop neckline, wide shoulder straps, and a standard athletic fit; built for lightweight comfort and repeated wear.\nCustomizable in multiple colors with printed graphics or text; logo placement available on chest, back, or hem.\nAvailable in adult and youth sizes.\nMOQ: 10 pieces",
+    "image": "/products/men-tank-top/01_flat_lay.png",
+    "images": [
+      "/products/men-tank-top/01_flat_lay.png",
+      "/products/men-tank-top/02_ghost_front.png",
+      "/products/men-tank-top/03_ghost_back.png",
+      "/products/men-tank-top/04_ghost_side.png",
+      "/products/men-tank-top/05_model_front.png"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "oversized-boxy-fit-t-shirt",
+    "name": "Oversized Football Jersey with V-Neck",
+    "folderName": "Oversized_Boxy_Fit_T-Shirt",
+    "gender": "male",
+    "description": "Polyester performance fabric.\nOversized short-sleeve fit with V-neck, chest lettering, shoulder number graphics, and striped sleeve bands; lightweight and durable for repeated wear.\nCustomizable colors, prints, names, numbers, and logo placement on chest, sleeves, and back.\nSizes: XS–XXXL.\nMOQ: 10 pieces.",
+    "image": "/products/oversized-boxy-fit-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/oversized-boxy-fit-t-shirt/01_flat_lay.png",
+      "/products/oversized-boxy-fit-t-shirt/02_ghost_front.png",
+      "/products/oversized-boxy-fit-t-shirt/03_ghost_back.png",
+      "/products/oversized-boxy-fit-t-shirt/04_ghost_side.png",
+      "/products/oversized-boxy-fit-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "puffer-vest",
+    "name": "Quilted Full-Zip Puffer Vest with Chest Stripe",
+    "folderName": "Puffer_Vest",
+    "gender": "female",
+    "description": "Outer shell and lining in quilted synthetic fabric with insulated padding.\nSleeveless regular-fit vest with full front zipper, stand collar, zip hand pockets, and horizontal baffle stitching for warmth and durability.\nCustom colors, chest stripe colors, printed or embroidered logos, and front/back logo placement available.\nSizes available from XS–3XL.\nMOQ: 50 pcs.",
+    "image": "/products/puffer-vest/01_flat_lay.png",
+    "images": [
+      "/products/puffer-vest/01_flat_lay.png",
+      "/products/puffer-vest/02_ghost_front.png",
+      "/products/puffer-vest/03_ghost_back.png",
+      "/products/puffer-vest/04_ghost_side.png",
+      "/products/puffer-vest/05_model_front.png"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "pullover-hoodie",
+    "name": "Oversized Pullover Fleece Hoodie",
+    "folderName": "Pullover_Hoodie",
+    "gender": "female",
+    "description": "Fleece fabric in solid dark charcoal/black.\nRelaxed oversized fit with double-layer hood, off-white drawcords, long sleeves, rib-knit cuffs and hem, and front kangaroo pocket; built for everyday wear and repeated use.\nCustom colors, prints, and logo placement available on front, back, sleeves, and pocket area.\nSizes available from XS–3XL.\nMOQ: 50 pieces.",
+    "image": "/products/pullover-hoodie/01_flat_lay.png",
+    "images": [
+      "/products/pullover-hoodie/01_flat_lay.png",
+      "/products/pullover-hoodie/02_ghost_front.png",
+      "/products/pullover-hoodie/03_ghost_back.png",
+      "/products/pullover-hoodie/04_ghost_side.png",
+      "/products/pullover-hoodie/05_model_front.png"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "reflector-polo",
+    "name": "Short-Sleeve Safety Polo Shirt",
+    "folderName": "Reflector_Polo",
+    "gender": "male",
+    "description": "Polyester performance fabric with full sublimated charcoal black and dark gray geometric pattern.\nShort-sleeve collared polo with three-button placket, left chest pocket, and reflective safety tape in two vertical front strips plus one horizontal chest band; built for breathable comfort and durable daily wear.\nCustomizable in colors, all-over prints, reflective layout, and logo/text placement on chest, sleeves, and back.\nSizes available from XS–5XL.\nMOQ: 10 pcs.",
+    "image": "/products/reflector-polo/01_flat_lay.png",
+    "images": [
+      "/products/reflector-polo/01_flat_lay.png",
+      "/products/reflector-polo/02_ghost_front.png",
+      "/products/reflector-polo/03_ghost_back.png",
+      "/products/reflector-polo/04_ghost_side.png",
+      "/products/reflector-polo/05_model_front.png"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "short-sleeve-button-up",
+    "name": "Short-Sleeve Woven Button-Up Shirt with Tonal Floral Print",
+    "folderName": "Short_Sleeve_Button-Up",
+    "gender": "male",
+    "description": "Lightweight woven fabric with a pale icy blue base and allover tonal floral print in muted blue-gray.\nStandard fit with point collar, full button front, left chest patch pocket, straight short sleeves, and slightly curved hem.\nBuilt for casual resort-style wear with durable button closure and clean woven construction.\nCustom options: fabric colors, allover prints, trim details, buttons, and logo placement on chest, sleeve, or back yoke.\nSizes: XS–3XL. MOQ: 50 pcs.",
+    "image": "/products/short-sleeve-button-up/01_flat_lay.png",
+    "images": [
+      "/products/short-sleeve-button-up/01_flat_lay.png",
+      "/products/short-sleeve-button-up/02_ghost_front.png",
+      "/products/short-sleeve-button-up/03_ghost_back.png",
+      "/products/short-sleeve-button-up/04_ghost_side.png",
+      "/products/short-sleeve-button-up/05_model_front.png"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "short-sleeve-scoop-neck-t-shirt",
+    "name": "Fitted Scoop-Neck Short-Sleeve Top",
+    "folderName": "Short_Sleeve_Scoop_Neck_T-Shirt",
+    "gender": "female",
+    "description": "Smooth stretch knit fabric in polyester/spandex or nylon/spandex blends.\nFitted body-skimming silhouette with wide scoop neckline, short fitted sleeves, and waist-length cropped cut; clean finish with no visible closures.\nAvailable in custom colors, all-over prints or solid dye, and logo placement on front, back, or sleeve.\nSizes: XS–XXL or custom size range.\nMOQ: 50 pieces.",
+    "image": "/products/short-sleeve-scoop-neck-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/short-sleeve-scoop-neck-t-shirt/01_flat_lay.png",
+      "/products/short-sleeve-scoop-neck-t-shirt/02_ghost_front.png",
+      "/products/short-sleeve-scoop-neck-t-shirt/03_ghost_back.png",
+      "/products/short-sleeve-scoop-neck-t-shirt/04_ghost_side.png",
+      "/products/short-sleeve-scoop-neck-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "short-sleeve-shirt",
+    "name": "Short-Sleeve Sublimated Performance T-Shirt",
+    "folderName": "Short_Sleeve_Shirt",
+    "gender": "male",
+    "description": "Lightweight performance polyester fabric with a smooth hand feel and breathable construction.\nShort-sleeve crewneck fit with moisture management, sky-blue to white gradient body, and rib collar and cuff trim; built for active wear and repeated use.\nCustomizable colors, all-over sublimated prints, chest and body graphics, sleeve details, and logo placement on front, back, and sleeves.\nAvailable in adult and youth sizing; custom size charts available.\nMOQ: 50 pieces.",
+    "image": "/products/short-sleeve-shirt/01_flat_lay.png",
+    "images": [
+      "/products/short-sleeve-shirt/01_flat_lay.png",
+      "/products/short-sleeve-shirt/02_ghost_front.png",
+      "/products/short-sleeve-shirt/03_ghost_back.png",
+      "/products/short-sleeve-shirt/04_ghost_side.png",
+      "/products/short-sleeve-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "slim-fitted-t-shirt",
+    "name": "Short-Sleeve Crew Neck T-Shirt",
+    "folderName": "Slim_Fitted_T-Shirt",
+    "gender": "male",
+    "description": "Fabric: Custom fabric options available, including polyester, cotton, or performance blends.\nFeatures: Regular fit, short sleeves, crew neck, solid black minimal design, durable construction for training and casual wear.\nCustomization: Available in custom colors, all-over prints or solid finishes, with logo placement on chest, sleeve, back, or hem.\nSizing: Offered in standard adult sizes from XS–XXL; extended sizing available on request.\nMOQ: Low minimum order quantity available; confirm final MOQ based on customization.",
+    "image": "/products/slim-fitted-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/slim-fitted-t-shirt/01_flat_lay.png",
+      "/products/slim-fitted-t-shirt/02_ghost_front.png",
+      "/products/slim-fitted-t-shirt/03_ghost_back.png",
+      "/products/slim-fitted-t-shirt/04_ghost_side.png",
+      "/products/slim-fitted-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 24,
+    "slug": "soft-shell-jacket",
+    "name": "High-Visibility Hooded Safety Jacket with Face Shield",
+    "folderName": "Soft_Shell_Jacket",
+    "gender": "female",
+    "description": "Smooth weather-resistant shell with integrated clear face shield and reflective silver striping.\nFull-zip hooded jacket with elasticized cuffs, vertical zip chest pocket, angled zip hand pockets, and harness-layout reflective detailing for visibility and function.\nCustomizable in fabric colors, reflective layout, printed graphics, and logo placement on chest, back, and sleeves.\nAvailable in sizes XS–5XL.\nMOQ: 50 pieces.",
+    "image": "/products/soft-shell-jacket/01_flat_lay.png",
+    "images": [
+      "/products/soft-shell-jacket/01_flat_lay.png",
+      "/products/soft-shell-jacket/02_ghost_front.png",
+      "/products/soft-shell-jacket/03_ghost_back.png",
+      "/products/soft-shell-jacket/04_ghost_side.png",
+      "/products/soft-shell-jacket/05_model_front.png"
+    ]
+  },
+  {
+    "id": 25,
+    "slug": "sublimated-polo-full-sleeve",
+    "name": "Long-Sleeve Performance Polo Shirt with Sublimated Color-Block Panels",
+    "folderName": "Sublimated_Polo_Full_Sleeve",
+    "gender": "male",
+    "description": "Lightweight polyester performance fabric with moisture-wicking sublimated print construction.\nLong-sleeve polo fit with rib-knit collar, short button placket, and durable colorfast graphics for repeated wear and washing.\nCustomizable colors, abstract prints, panel layouts, and logo placement on chest, sleeves, back, and collar.\nAvailable in adult and youth sizing across a full size range.\nMOQ: 10 pieces.",
+    "image": "/products/sublimated-polo-full-sleeve/01_flat_lay.png",
+    "images": [
+      "/products/sublimated-polo-full-sleeve/01_flat_lay.png",
+      "/products/sublimated-polo-full-sleeve/02_ghost_front.png",
+      "/products/sublimated-polo-full-sleeve/03_ghost_back.png",
+      "/products/sublimated-polo-full-sleeve/04_ghost_side.png",
+      "/products/sublimated-polo-full-sleeve/05_model_front.png"
+    ]
+  },
+  {
+    "id": 26,
+    "slug": "sublimated-polo-short-sleeve",
+    "name": "Custom Sublimated Performance Polo Shirt",
+    "folderName": "Sublimated_Polo_Short_Sleeve",
+    "gender": "male",
+    "description": "Lightweight synthetic jersey fabric with a smooth hand feel and sublimated color-block print.\nShort-sleeve polo with set-in sleeves, straight hem, rib-knit foldover collar, and two-button placket; built for breathable performance and durable color retention.\nCustomizable in colors, all-over graphics, printed names, and chest logos/seals on left and right chest.\nAvailable in adult and youth sizes.\nMOQ: 10 pcs",
+    "image": "/products/sublimated-polo-short-sleeve/01_flat_lay.png",
+    "images": [
+      "/products/sublimated-polo-short-sleeve/01_flat_lay.png",
+      "/products/sublimated-polo-short-sleeve/02_ghost_front.png",
+      "/products/sublimated-polo-short-sleeve/03_ghost_back.png",
+      "/products/sublimated-polo-short-sleeve/04_ghost_side.png",
+      "/products/sublimated-polo-short-sleeve/05_model_front.png"
+    ]
+  },
+  {
+    "id": 27,
+    "slug": "sweatpants",
+    "name": "Oversized Wide-Leg Fleece Sweatpants",
+    "folderName": "Sweatpants",
+    "gender": "male",
+    "description": "Light heather gray fleece fabric.\nOversized wide-leg fit with relaxed puddling leg, elastic waistband, long self-fabric drawcord, slanted side pockets, vertical leg seams, and lower-leg seam panels.\nAvailable for custom colors, prints, and logo placement on the leg, hip, or waistband.\nSizes available from XS–XXL.\nMOQ: 100 pieces.",
+    "image": "/products/sweatpants/01_flat_lay.png",
+    "images": [
+      "/products/sweatpants/01_flat_lay.png",
+      "/products/sweatpants/02_ghost_front.png",
+      "/products/sweatpants/05_model_front.png"
+    ]
+  },
+  {
+    "id": 28,
+    "slug": "track-jacket",
+    "name": "Full-Zip Track Jacket with Contrast Sleeve Stripes",
+    "folderName": "Track_JAcket",
+    "gender": "male",
+    "description": "Polyester performance knit or poly-cotton track fabric with smooth outer face and soft inner finish.\nFull-zip track jacket with stand collar, ribbed cuffs and hem, angled welt hand pockets, contrast shoulder-to-sleeve stripe panels, and reinforced stitching for regular wear.\nCustomizable colors, panel layouts, printed or embroidered logos, and placement on chest, back, sleeves, and collar.\nAvailable in adult and youth sizing, typically XS–3XL; extended sizes on request.\nMOQ: Typically 50 pieces per design.",
+    "image": "/products/track-jacket/01_flat_lay.png",
+    "images": [
+      "/products/track-jacket/01_flat_lay.png",
+      "/products/track-jacket/02_ghost_front.png",
+      "/products/track-jacket/03_ghost_back.png",
+      "/products/track-jacket/04_ghost_side.png",
+      "/products/track-jacket/05_model_front.png"
+    ]
+  },
+  {
+    "id": 29,
+    "slug": "v-neck-short-sleeve-t-shirt",
+    "name": "Short-Sleeve V-Neck Jersey with Halftone Fade",
+    "folderName": "V-neck_short_sleeve_T-shirt",
+    "gender": "male",
+    "description": "Smooth performance polyester fabric with a lightweight athletic feel.\nSet-in short sleeves, self-fabric V-neck collar, and regular athletic fit; suitable for training and team wear; sublimated graphics for long-lasting color and print durability.\nCustom colors, front and back prints, chest patch graphic, lettering, numbers, names, and logo placement available.\nSizes: Youth to adult plus sizes.\nMOQ: 10 pcs.",
+    "image": "/products/v-neck-short-sleeve-t-shirt/01_flat_lay.png",
+    "images": [
+      "/products/v-neck-short-sleeve-t-shirt/01_flat_lay.png",
+      "/products/v-neck-short-sleeve-t-shirt/02_ghost_front.png",
+      "/products/v-neck-short-sleeve-t-shirt/03_ghost_back.png",
+      "/products/v-neck-short-sleeve-t-shirt/04_ghost_side.png",
+      "/products/v-neck-short-sleeve-t-shirt/05_model_front.png"
+    ]
+  },
+  {
+    "id": 30,
+    "slug": "varsity-jacket",
+    "name": "Varsity Jacket",
+    "folderName": "Varsity_Jacket",
+    "gender": "male",
+    "description": "Custom sportswear product.",
+    "image": "/products/varsity-jacket/01_flat_lay.png",
+    "images": [
+      "/products/varsity-jacket/01_flat_lay.png"
+    ]
+  },
+  {
+    "id": 31,
+    "slug": "windbreaker",
+    "name": "Lightweight Hooded Zip Jacket",
+    "folderName": "Windbreaker",
+    "gender": "male",
+    "description": "Lightweight woven fabric with a lightly weather-resistant finish.\nRegular fit with full front zipper, attached drawcord hood, elasticized cuffs, straight hem, and clean lower-front seam detailing for windbreaker-style function and everyday durability.  \nAvailable in custom colors, all-over or panel prints, and logo placement on chest, back, sleeves, or hood.  \nSizes available from XS–3XL.  \nMOQ: 50 pieces.",
+    "image": "/products/windbreaker/01_flat_lay.png",
+    "images": [
+      "/products/windbreaker/01_flat_lay.png",
+      "/products/windbreaker/02_ghost_front.png",
+      "/products/windbreaker/03_ghost_back.png",
+      "/products/windbreaker/04_ghost_side.png",
+      "/products/windbreaker/05_model_front.png"
+    ]
+  },
+  {
+    "id": 32,
+    "slug": "women-tank-top",
+    "name": "Fitted Sleeveless Tank Top",
+    "folderName": "Women_Tank_Top",
+    "gender": "female",
+    "description": "Smooth knit fabric construction.\nFitted cut with a scoop neckline and wide shoulder straps; lightweight, flexible, and built for regular wear.\nCustomizable in colors, all-over prints or solid panels, with logo placement on front, back, or chest.\nAvailable in sizes XS–XXL.\nMOQ: 50 pieces.",
+    "image": "/products/women-tank-top/01_flat_lay.png",
+    "images": [
+      "/products/women-tank-top/01_flat_lay.png",
+      "/products/women-tank-top/02_ghost_front.png",
+      "/products/women-tank-top/03_ghost_back.png",
+      "/products/women-tank-top/04_ghost_side.png",
+      "/products/women-tank-top/05_model_front.png"
+    ]
+  },
+  {
+    "id": 33,
+    "slug": "zip-neck-polo",
+    "name": "Short-Sleeve Quarter-Zip Polo Shirt",
+    "folderName": "Zip-Neck_Polo",
+    "gender": "male",
+    "description": "Performance polyester fabric with moisture-wicking finish and sublimated tonal abstract brush/camo pattern.\nAthletic fit with short sleeves, quarter-zip front, fold collar, and durable construction for training and team wear.  \nCustomizable in colors, all-over prints, and logo placement on chest, sleeves, back, or collar.  \nAvailable in adult and youth sizes, including extended size ranges on request.  \nMOQ: 10 pieces.",
+    "image": "/products/zip-neck-polo/01_flat_lay.png",
+    "images": [
+      "/products/zip-neck-polo/01_flat_lay.png",
+      "/products/zip-neck-polo/02_ghost_front.png",
+      "/products/zip-neck-polo/03_ghost_back.png",
+      "/products/zip-neck-polo/04_ghost_side.png",
+      "/products/zip-neck-polo/05_model_front.png"
+    ]
+  }
+]

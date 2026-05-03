@@ -38,7 +38,8 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const dropdownRef = useRef(null);
+  const productsDropdownRef = useRef(null);
+  const howItWorksDropdownRef = useRef(null);
 
   // Handle scroll effect
   useEffect(() => {
@@ -75,8 +76,10 @@ export default function Navbar() {
   // Click outside to close dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target)) {
         setProductsDropdownOpen(false);
+      }
+      if (howItWorksDropdownRef.current && !howItWorksDropdownRef.current.contains(event.target)) {
         setHowItWorksDropdownOpen(false);
       }
     };
@@ -124,7 +127,7 @@ export default function Navbar() {
               <nav className="desktop-nav">
                 <div className="nav-pill-container">
                   {/* Products Dropdown */}
-                  <div className="dropdown-relative" ref={dropdownRef}>
+                  <div className="dropdown-relative" ref={productsDropdownRef}>
                     <button
                       onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
                       className={`nav-pill-link ${pathname.startsWith("/products") ? "active" : "inactive"}`}
@@ -156,7 +159,7 @@ export default function Navbar() {
                   </div>
 
                   {/* How It Works Dropdown */}
-                  <div className="dropdown-relative" ref={dropdownRef}>
+                  <div className="dropdown-relative" ref={howItWorksDropdownRef}>
                     <button
                       onClick={() => setHowItWorksDropdownOpen(!howItWorksDropdownOpen)}
                       className={`nav-pill-link ${pathname.startsWith("/how-it-works") ? "active" : "inactive"}`}

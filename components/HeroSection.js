@@ -9,10 +9,10 @@ const HeroSection = () => {
       <div className="hero-layout-container">
         {/* Left: Text */}
         <div className="hero-text-content animate-fade-up">
-          <h1 className="hero-main-title">
-            Engi<br />
-            <span className="gradient-text">neered</span><br />
-            for Speed
+          <h1 className="hero-tagline">
+            Built by<br />
+            <em>Engineers,</em><br />
+            Not Marketers.
           </h1>
 
           <p className="hero-description">

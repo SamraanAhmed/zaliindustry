@@ -1,7 +1,7 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #ffffff;
-  --accent-color: #ff3c00; /* Nike-style orange-red */
+  --accent-color: #d5cbc7; /* Nike-style orange-red */
   --highlight-color: #e5e5e5;
   --text-main: #111111;
   --text-muted: #555555;
@@ -66,3 +66,77 @@ button:hover {
 .transition-transform { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
 .rotate-180 { transform: rotate(180deg); }
 .duration-200 { transition-duration: 200ms; }
+
+/* ── Home Page Scroll-Driven BG ──────────────────────────── */
+.home-scroll-main {
+  transition: background-color 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Featured section spacing */
+.home-featured-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Dark process wrapper — invert text/icon colors for dark bg */
+.home-process-wrapper .section-title,
+.home-process-wrapper .step-title,
+.home-process-wrapper .step-desc,
+.home-process-wrapper .spec-tag,
+.home-process-wrapper .f-mini-info h5,
+.home-process-wrapper .f-mini-info p,
+.home-process-wrapper .hover-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.home-process-wrapper .step-line {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.home-process-wrapper .step-num-bubble {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.home-process-wrapper .nav-arrow {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.home-process-wrapper .nav-arrow:hover:not(.disabled) {
+  background: rgba(255,255,255,0.15);
+}
+
+.home-process-wrapper .dot {
+  background: rgba(255,255,255,0.2);
+}
+
+.home-process-wrapper .dot.active {
+  background: #fff;
+}
+
+.home-process-wrapper .process-section {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.home-process-wrapper .fabric-placeholder-section {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.home-process-wrapper .fabric-mini-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.home-process-wrapper .fabric-mini-card:hover {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.home-process-wrapper .f-mini-info {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.home-process-wrapper .hover-link:hover {
+  color: rgba(255,255,255,0.5);
+}
+

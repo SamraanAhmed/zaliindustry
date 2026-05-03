@@ -89,7 +89,7 @@
 }
 
 .nav-pill-link:hover, .nav-pill-link.active {
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(8.5px);
@@ -478,7 +478,7 @@
 .search-result-id {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #ff3c00;
+  color: #d5cbc7;
   text-transform: uppercase;
 }
 

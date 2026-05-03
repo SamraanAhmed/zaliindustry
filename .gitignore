@@ -1,5 +1,7 @@
 .next
 node_modules
+
+Products
 .env
 .env.local
 .env.production

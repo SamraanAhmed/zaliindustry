@@ -11,6 +11,7 @@ import '../styles/HeroProductSlider.css';
 import '../styles/prodCardBorder.css';
 import '../styles/ProductQuoteModal.css';
 import '../styles/whatsapp.css';
+import '../styles/cart.css';
 import { QuoteProvider } from '../context/QuoteContext';
 import WhatsAppButton from '../components/WhatsAppButton';
 
