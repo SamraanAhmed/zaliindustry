@@ -125,7 +125,7 @@
 .map-circle {
     width: 20px;
     height: 20px;
-    background: #ff3c00;
+    background: #d5cbc7;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgba(255,60,0,0.2), 0 0 0 20px rgba(255,60,0,0.1);
     animation: pulse 2s infinite;

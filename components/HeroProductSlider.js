@@ -47,9 +47,23 @@ const PANELS = [
 /* ─── Desktop: Expandable Accordion ─────────────────────── */
 function DesktopAccordion() {
   const [activeIndex, setActiveIndex] = useState(2);
+  const [isHovered, setIsHovered] = useState(false);
+  const total = PANELS.length;
+
+  useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % total);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isHovered, total]);
 
   return (
-    <div className="expand-panels-root">
+    <div 
+      className="expand-panels-root"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {PANELS.map((panel, i) => (
         <Link
           key={panel.id}
