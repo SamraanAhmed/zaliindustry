@@ -252,15 +252,14 @@
   flex-direction: column;
   transition: transform 0.3s, box-shadow 0.3s;
   background-color: var(--secondary-color);
-  border-radius: 12px;
   height: 100%;
-  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.69);
+  border: 1px solid #000000;
 }
 
-.product-card:hover {
+/* .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 3px 5px 5px 0px rgba(249,1,1,0.69);
-}
+} */
 
 .product-img-wrapper {
   aspect-ratio: 1 / 1.1;
@@ -269,8 +268,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
   position: relative;
 }
 
