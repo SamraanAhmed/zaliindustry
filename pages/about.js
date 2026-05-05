@@ -81,18 +81,24 @@ export default function AboutPage() {
   const [heroRef,  heroInView]  = useInView(0.1);
 
   useEffect(() => {
-    const obs = [];
-    SECTION_THEMES.forEach(({ id, bg }) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const theme = SECTION_THEMES.find((t) => t.id === entry.target.id);
+            if (theme) setPageBg(theme.bg);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "-45% 0px -45% 0px" }
+    );
+
+    SECTION_THEMES.forEach(({ id }) => {
       const el = document.getElementById(id);
-      if (!el) return;
-      const o = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setPageBg(bg); },
-        { threshold: 0.3, rootMargin: "-10% 0px -10% 0px" }
-      );
-      o.observe(el);
-      obs.push(o);
+      if (el) observer.observe(el);
     });
-    return () => obs.forEach(o => o.disconnect());
+
+    return () => observer.disconnect();
   }, []);
 
   return (

@@ -33,39 +33,33 @@ const ProductsPage = () => {
 
       <Navbar />
 
-      <main className="container shop-page-container">
-        {/* Left Sidebar Filter */}
-        <aside className="shop-sidebar">
-          <h3 className="filter-title">Category</h3>
-          <ul className="filter-list">
-            {categories.map(cat => (
-              <li key={cat}>
-                <button 
-                  className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  <span className="filter-label">{cat}</span>
-                  <span className="filter-count">{categoryCounts[cat]}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
+      <main className="products-page" style={{ padding: '120px 80px 80px', maxWidth: '1400px', margin: '0 auto' }}>
+        <div className="shop-header" style={{ marginBottom: '48px', textAlign: 'center' }}>
+          <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '12px', fontWeight: 700, letterSpacing: '.15em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '16px' }}>Catalog</p>
+          <h1 className="shop-title" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(48px, 5vw, 72px)', color: '#0A0A0A', marginBottom: '16px', lineHeight: 1 }}>ALL PERFORMANCE GEAR</h1>
+          <p className="shop-count" style={{ fontSize: '15px', color: '#6B6B68', maxWidth: '500px', margin: '0 auto', lineHeight: 1.6 }}>
+            Showing {filteredProducts.length} results. Custom-manufactured across nine categories. MOQ-friendly, export-ready.
+          </p>
+        </div>
 
-        {/* Right Product Listing */}
-        <div className="shop-main-content">
-          <div className="shop-header">
-            <h1 className="shop-title">ALL PERFORMANCE GEAR</h1>
-            <p className="shop-count">
-              Showing ({filteredProducts.length}) results for your next victory.
-            </p>
-          </div>
+        {/* Top Horizontal Filter Section */}
+        <div className="products-filters" style={{ display: 'flex', gap: '8px', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '8px', marginBottom: '40px', justifyContent: 'center', whiteSpace: 'nowrap' }}>
+          {categories.map(cat => (
+            <button 
+              key={cat}
+              className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
-          <div className="product-grid shop-grid">
-            {filteredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+        {/* Product Grid */}
+        <div className="products-grid-full" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+          {filteredProducts.map((product, index) => (
+            <ProductCard key={product.id} product={product} index={index} />
+          ))}
         </div>
       </main>
 

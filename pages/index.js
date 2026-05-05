@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -50,30 +51,21 @@ export default function Home() {
         {/* STRIP */}
         <div className="cat-strip">
           <div className="cat-strip-inner" id="stripInner">
-            <span className="cat-strip-item">Fight Wear<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Team Uniforms<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Surfwear & Beach<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Casual & Lifestyle<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Women's Collection<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Youth & Kids<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Running & Performance<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Outerwear & Jackets<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Compression & Base Layer<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Fight Wear<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Team Uniforms<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Surfwear & Beach<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Casual & Lifestyle<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Women's Collection<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Youth & Kids<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Running & Performance<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Outerwear & Jackets<span className="cat-strip-dot"></span></span>
-            <span className="cat-strip-item">Compression & Base Layer<span className="cat-strip-dot"></span></span>
+            {[...Array(4)].map((_, i) => (
+              <React.Fragment key={i}>
+                <span className="cat-strip-item">Running Shoes<span className="cat-strip-dot"></span></span>
+                <span className="cat-strip-item">Training Apparel<span className="cat-strip-dot"></span></span>
+                <span className="cat-strip-item">Sportswear<span className="cat-strip-dot"></span></span>
+                <span className="cat-strip-item">Accessories<span className="cat-strip-dot"></span></span>
+                <span className="cat-strip-item">Equipment<span className="cat-strip-dot"></span></span>
+              </React.Fragment>
+            ))}
           </div>
         </div>
 
         {/* SHOP BY CATEGORY */}
-        <section style={{ padding: 0 }}>
-          <div style={{ padding: '64px 80px 36px 80px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+        <section className="section-new" style={{ paddingBottom: '36px', paddingTop: '64px' }}>
+          <div className="products-header">
             <div className="reveal">
               <p className="section-label">Browse Range</p>
               <h2 className="section-title">Shop by Category</h2>
@@ -81,39 +73,39 @@ export default function Home() {
             <Link href="/products" className="btn-ghost-new reveal delay-2">View All →</Link>
           </div>
           <div className="category-grid">
-            <Link href="/products?cat=fight" className="cat-card reveal">
-              <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=700&q=80" alt="Fight Wear" />
+            <Link href="/products?cat=Running Shoes" className="cat-card reveal">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80" alt="Running Shoes" />
               <div className="cat-card-overlay"></div>
               <div className="cat-card-content">
-                <div className="cat-name">Fight Wear</div>
-                <div className="cat-sub">Rashguards, MMA shorts, K1 shorts, spats, boxing robes</div>
+                <div className="cat-name">Running Shoes</div>
+                <div className="cat-sub">High-performance footwear for athletes</div>
                 <span className="cat-arrow">Shop Now →</span>
               </div>
             </Link>
-            <Link href="/products?cat=team" className="cat-card reveal delay-1">
-              <img src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=700&q=80" alt="Team Sports" />
+            <Link href="/products?cat=Training Apparel" className="cat-card reveal delay-1">
+              <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=700&q=80" alt="Training Apparel" />
               <div className="cat-card-overlay"></div>
               <div className="cat-card-content">
-                <div className="cat-name">Team Sports</div>
-                <div className="cat-sub">Football kits, basketball uniforms, cricket, cheer, esports</div>
+                <div className="cat-name">Training Apparel</div>
+                <div className="cat-sub">Breathable tees, shorts, and activewear</div>
                 <span className="cat-arrow">Shop Now →</span>
               </div>
             </Link>
-            <Link href="/products?cat=surf" className="cat-card reveal delay-2">
-              <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=700&q=80" alt="Surfwear" />
+            <Link href="/products?cat=Sportswear" className="cat-card reveal delay-2">
+              <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=700&q=80" alt="Sportswear" />
               <div className="cat-card-overlay"></div>
               <div className="cat-card-content">
-                <div className="cat-name">Surfwear & Beach</div>
-                <div className="cat-sub">Boardshorts, swim shorts, surf ponchos, aloha shirts</div>
+                <div className="cat-name">Sportswear</div>
+                <div className="cat-sub">Compression tights and athletic layers</div>
                 <span className="cat-arrow">Shop Now →</span>
               </div>
             </Link>
-            <Link href="/products?cat=casual" className="cat-card reveal delay-3">
-              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700&q=80" alt="Casual" />
+            <Link href="/products?cat=Accessories" className="cat-card reveal delay-3">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=700&q=80" alt="Accessories" />
               <div className="cat-card-overlay"></div>
               <div className="cat-card-content">
-                <div className="cat-name">Casual & Lifestyle</div>
-                <div className="cat-sub">Tees, hoodies, quarter-zips, varsity jackets, cargo joggers</div>
+                <div className="cat-name">Accessories & Gear</div>
+                <div className="cat-sub">Gloves, bags, and essential equipment</div>
                 <span className="cat-arrow">Shop Now →</span>
               </div>
             </Link>
@@ -141,7 +133,7 @@ export default function Home() {
         {/* PROCESS */}
         <section className="process-section section-new">
           <div className="container-new">
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <div className="products-header" style={{ marginBottom: '44px' }}>
               <div>
                 <p className="section-label" style={{ color: 'rgba(255,255,255,.3)' }}>
                   <span style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,.3)', display: 'inline-block', marginRight: '12px', verticalAlign: 'middle' }}></span>
@@ -314,7 +306,7 @@ export default function Home() {
         {/* FABRIC */}
         <section className="section-new fabric-section">
           <div className="container-new">
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '44px' }}>
+            <div className="products-header">
               <div>
                 <p className="section-label reveal">Materials</p>
                 <Link href="/fabrics" style={{ textDecoration: 'none', color: 'inherit' }}>
