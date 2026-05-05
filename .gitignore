@@ -8,3 +8,4 @@ Products
 .env.development
 Products/*
 public/products/*
+zali_website/*
