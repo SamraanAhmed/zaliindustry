@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroProductSlider from "./HeroProductSlider";
+import GradientText from "./GradientText";
 
 const HeroSection = () => {
   return (
@@ -10,9 +11,11 @@ const HeroSection = () => {
         {/* Left: Text */}
         <div className="hero-text-content animate-fade-up">
           <h1 className="hero-tagline">
-            Built by<br />
-            <em>Engineers,</em><br />
-            Not Marketers.
+            <GradientText colors={["#000000", "#777777", "#000000"]} animationSpeed={5} className="hero-gradient-text">
+              Built by<br />
+              <em>Engineers,</em><br />
+              Not Marketers.
+            </GradientText>
           </h1>
 
           <p className="hero-description">

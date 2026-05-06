@@ -7,7 +7,19 @@ import HeroSection from '../components/HeroSection';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import { products } from '../components/ProductData';
+import LogoLoop from '../components/LogoLoop';
+import { SiPaypal, SiStripe, SiWise, SiPayoneer, SiWesternunion, SiMoneygram } from 'react-icons/si';
 
+const paymentLogos = [
+  { node: <SiPaypal />, title: "PayPal" },
+  { node: <SiStripe />, title: "Stripe" },
+  { node: <SiWise />, title: "Wise" },
+  { node: <SiPayoneer />, title: "Payoneer" },
+  { node: <span style={{ fontWeight: 800, fontFamily: 'Arial, sans-serif' }}>Remitly</span>, title: "Remitly" },
+  { node: <SiWesternunion />, title: "Western Union" },
+  { node: <span style={{ fontWeight: 800, fontFamily: 'Arial, sans-serif', color: '#ff6600', textTransform: 'lowercase' }}>ria</span>, title: "Ria" },
+  { node: <SiMoneygram />, title: "MoneyGram" },
+];
 const PRINT_METHODS = [
   {
     name: "Dye Sublimation",
@@ -240,7 +252,6 @@ export default function Home() {
             <div className="products-header" style={{ marginBottom: '44px' }}>
               <div>
                 <p className="section-label" style={{ color: 'rgba(255,255,255,.3)' }}>
-                  <span style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,.3)', display: 'inline-block', marginRight: '12px', verticalAlign: 'middle' }}></span>
                   Production
                 </p>
                 <h2 className="section-title light reveal">How It Works</h2>
@@ -406,10 +417,8 @@ export default function Home() {
         <section className="section-new testimonials-section">
           <div className="container-new">
             <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-              <p className="section-label" style={{ color: 'rgba(255,255,255,.3)', justifyContent: 'center' }}>
-                <span style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,.3)', display: 'inline-block', marginRight: '12px', verticalAlign: 'middle' }}></span>
+              <p className="section-label" style={{ color: 'rgba(255,255,255,.3)' }}>
                 Client Reviews
-                <span style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,.3)', display: 'inline-block', marginLeft: '12px', verticalAlign: 'middle' }}></span>
               </p>
               <h2 className="section-title light reveal">What Our Clients Say</h2>
             </div>
@@ -436,6 +445,31 @@ export default function Home() {
                 <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* PAYMENT METHODS */}
+        <section className="section-new" style={{ paddingBottom: '40px', paddingTop: '40px', backgroundColor: '#fafafa', borderTop: '1px solid #eaeaea' }}>
+          <div className="container-new">
+             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+                <p className="section-label" style={{ color: '#888', justifyContent: 'center' }}>
+                  Supported Payment Methods
+                </p>
+             </div>
+             <div style={{ position: 'relative', overflow: 'hidden' }}>
+                <LogoLoop
+                  logos={paymentLogos}
+                  speed={80}
+                  direction="left"
+                  logoHeight={40}
+                  gap={60}
+                  hoverSpeed={20}
+                  scaleOnHover
+                  fadeOut
+                  fadeOutColor="#fafafa"
+                  ariaLabel="Payment methods"
+                />
+             </div>
           </div>
         </section>
       </main>

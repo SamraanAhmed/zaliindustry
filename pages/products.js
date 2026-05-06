@@ -33,7 +33,7 @@ const ProductsPage = () => {
 
       <Navbar />
 
-      <main className="products-page" style={{ padding: '120px 80px 80px', maxWidth: '1400px', margin: '0 auto' }}>
+      <main className="products-page">
         <div className="shop-header" style={{ marginBottom: '48px', textAlign: 'center' }}>
           <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '12px', fontWeight: 700, letterSpacing: '.15em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '16px' }}>Catalog</p>
           <h1 className="shop-title" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(48px, 5vw, 72px)', color: '#0A0A0A', marginBottom: '16px', lineHeight: 1 }}>ALL PERFORMANCE GEAR</h1>
@@ -43,7 +43,7 @@ const ProductsPage = () => {
         </div>
 
         {/* Top Horizontal Filter Section */}
-        <div className="products-filters" style={{ display: 'flex', gap: '8px', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '8px', marginBottom: '40px', justifyContent: 'center', whiteSpace: 'nowrap' }}>
+        <div className="products-filters">
           {categories.map(cat => (
             <button 
               key={cat}
@@ -56,7 +56,7 @@ const ProductsPage = () => {
         </div>
 
         {/* Product Grid */}
-        <div className="products-grid-full" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+        <div className="products-grid-full">
           {filteredProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}

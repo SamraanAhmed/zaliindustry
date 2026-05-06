@@ -13,7 +13,7 @@ export default function CategoriesPage() {
 
       <Navbar />
 
-      <main className="container" style={{ paddingTop: '8rem', paddingBottom: '8rem' }}>
+      <main className="container category-page-wrapper">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h1 className="fabrics-title">Product Categories</h1>
             <p className="fabrics-subtitle">Explore our specialized gear engineered for every discipline.</p>

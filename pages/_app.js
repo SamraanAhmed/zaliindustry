@@ -13,6 +13,8 @@ import '../styles/ProductQuoteModal.css';
 import '../styles/whatsapp.css';
 import '../styles/cart.css';
 import '../styles/home-new.css';
+import '../styles/LogoLoop.css';
+import '../styles/GradientText.css';
 import { QuoteProvider } from '../context/QuoteContext';
 import WhatsAppButton from '../components/WhatsAppButton';
 
