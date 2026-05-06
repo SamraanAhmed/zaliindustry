@@ -212,8 +212,25 @@
     gap: 24px;
   }
   
-  .category-grid, .products-grid, .process-grid, .fabric-grid, .testimonials-grid {
+  .products-grid, .process-grid, .fabric-grid, .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  .category-grid .cat-card-content {
+    padding: 16px 14px;
+  }
+  .category-grid .cat-name {
+    font-size: 18px;
+  }
+  .category-grid .cat-sub {
+    font-size: 10px;
+  }
+  .category-grid .cat-arrow {
+    margin-top: 8px;
   }
   
   .custom-features {
@@ -240,4 +257,96 @@
   .fabric-explore {
     padding: 24px;
   }
+}
+
+/* Print Carousel */
+.print-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+  max-width: 740px;
+  margin: auto;
+}
+.print-carousel-img-container {
+  width: 100%;
+  aspect-ratio: 2/1;
+  background: #F2F2F0;
+  overflow: hidden;
+  position: relative;
+}
+.print-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+.print-carousel-content {
+  background: #F6F6F4;
+  padding: 24px;
+  min-height: 160px;
+}
+.print-carousel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.print-carousel-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: #C8C8C6;
+  line-height: 1;
+}
+.print-carousel-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+}
+.print-carousel-desc {
+  font-size: 14px;
+  color: #6B6B68;
+  line-height: 1.65;
+}
+.print-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.print-carousel-btn {
+  background: transparent;
+  border: 1px solid #E5E5E2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s;
+  color: #0A0A0A;
+}
+.print-carousel-btn:hover {
+  background: #0A0A0A;
+  color: #fff;
+  border-color: #0A0A0A;
+}
+.print-carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+.print-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E5E5E2;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+  padding: 0;
+}
+.print-carousel-dot.active {
+  background: #0A0A0A;
 }

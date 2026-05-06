@@ -8,16 +8,120 @@ import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import { products } from '../components/ProductData';
 
+const PRINT_METHODS = [
+  {
+    name: "Dye Sublimation",
+    desc: "All-over print on polyester. Zero fade, zero cracking — our most popular method for fight wear, surfwear, and team kits.",
+    img: "/prinitingMethods/Dye Sublimation.png"
+  },
+  {
+    name: "DTF — Direct to Film",
+    desc: "High-detail print on cotton and blended fabrics. Ideal for logo placement on casual and lifestyle garments.",
+    img: "/prinitingMethods/Direct to Film.png"
+  },
+  {
+    name: "DTG — Direct to Garment",
+    desc: "Photographic-quality prints on light-colored garments. Best for short runs and intricate full-color artwork.",
+    img: "/prinitingMethods/Direct to Garment.png"
+  },
+  {
+    name: "Screen Printing",
+    desc: "Bold, high-volume graphics on cotton. Cost-effective at scale for branded casual and team wear.",
+    img: "/prinitingMethods/Screen Printing.png"
+  },
+  {
+    name: "Technical Embroidery",
+    desc: "Premium finish for logos, crests, and patches. Available on hats, jackets, polos, and fight wear.",
+    img: "/prinitingMethods/Technical Embroidery.png"
+  }
+];
+
+const PrintMethodsCarousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => setActiveIndex((prev) => (prev + 1) % PRINT_METHODS.length);
+  const prevSlide = () => setActiveIndex((prev) => (prev - 1 + PRINT_METHODS.length) % PRINT_METHODS.length);
+
+  return (
+    <div className="print-carousel reveal delay-3">
+      <div className="print-carousel-img-container">
+        <img src={PRINT_METHODS[activeIndex].img} alt={PRINT_METHODS[activeIndex].name} className="print-carousel-img" />
+      </div>
+      <div className="print-carousel-content">
+        <div className="print-carousel-header">
+           <div className="print-carousel-num">0{activeIndex + 1}</div>
+           <div className="print-carousel-name">{PRINT_METHODS[activeIndex].name}</div>
+        </div>
+        <div className="print-carousel-desc">{PRINT_METHODS[activeIndex].desc}</div>
+      </div>
+      <div className="print-carousel-controls">
+        <button onClick={prevSlide} className="print-carousel-btn" aria-label="Previous Print Method">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div className="print-carousel-dots">
+          {PRINT_METHODS.map((_, i) => (
+            <button key={i} className={`print-carousel-dot ${i === activeIndex ? 'active' : ''}`} onClick={() => setActiveIndex(i)} aria-label={`Go to slide ${i + 1}`}></button>
+          ))}
+        </div>
+        <button onClick={nextSlide} className="print-carousel-btn" aria-label="Next Print Method">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const FABRICS = [
+  { name: 'Chiffon Fabric', image: '/Fabrics/Chiffon Fabric.jpg', description: 'Lightweight and shear, perfect for delicate performance pieces.' },
+  { name: 'Linen Fabric', image: '/Fabrics/Linen fabric.jpg', description: 'Highly breathable and moisture-wicking natural fiber.' },
+  { name: 'Silk Fabric', image: '/Fabrics/Silk fabric.jpg', description: 'Luxury meets performance with unmatched smoothness.' },
+  { name: 'Valvet Fabric', image: '/Fabrics/Valvet Fabric.jpg', description: 'Premium plush texture for elite lifestyle wear.' },
+  { name: 'Wool Fabric', image: '/Fabrics/Wool fabric.jpg', description: 'Natural temperature regulation for all-weather comfort.' },
+];
+
+const FabricsCarousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => setActiveIndex((prev) => (prev + 1) % FABRICS.length);
+  const prevSlide = () => setActiveIndex((prev) => (prev - 1 + FABRICS.length) % FABRICS.length);
+
+  return (
+    <div className="print-carousel reveal delay-3">
+      <div className="print-carousel-img-container">
+        <Link href="/fabrics">
+          <img src={FABRICS[activeIndex].image} alt={FABRICS[activeIndex].name} className="print-carousel-img" style={{ cursor: 'pointer' }} />
+        </Link>
+      </div>
+      <div className="print-carousel-content">
+        <div className="print-carousel-header">
+           <div className="print-carousel-num">0{activeIndex + 1}</div>
+           <Link href="/fabrics" style={{ textDecoration: 'none' }}>
+             <div className="print-carousel-name">{FABRICS[activeIndex].name}</div>
+           </Link>
+        </div>
+        <div className="print-carousel-desc">{FABRICS[activeIndex].description}</div>
+      </div>
+      <div className="print-carousel-controls">
+        <button onClick={prevSlide} className="print-carousel-btn" aria-label="Previous Fabric">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div className="print-carousel-dots">
+          {FABRICS.map((_, i) => (
+            <button key={i} className={`print-carousel-dot ${i === activeIndex ? 'active' : ''}`} onClick={() => setActiveIndex(i)} aria-label={`Go to slide ${i + 1}`}></button>
+          ))}
+        </div>
+        <button onClick={nextSlide} className="print-carousel-btn" aria-label="Next Fabric">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   const featuredProducts = products.slice(0, 3); // Based on original index.js
 
-  const FABRICS = [
-    { name: 'Chiffon Fabric', image: '/Fabrics/Chiffon Fabric.jpg', description: 'Lightweight and shear, perfect for delicate performance pieces.' },
-    { name: 'Linen Fabric', image: '/Fabrics/Linen fabric.jpg', description: 'Highly breathable and moisture-wicking natural fiber.' },
-    { name: 'Silk Fabric', image: '/Fabrics/Silk fabric.jpg', description: 'Luxury meets performance with unmatched smoothness.' },
-    { name: 'Valvet Fabric', image: '/Fabrics/Valvet Fabric.jpg', description: 'Premium plush texture for elite lifestyle wear.' },
-    { name: 'Wool Fabric', image: '/Fabrics/Wool fabric.jpg', description: 'Natural temperature regulation for all-weather comfort.' },
-  ];
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -262,82 +366,38 @@ export default function Home() {
               <p className="section-label reveal">Print Technologies</p>
               <h2 className="section-title reveal delay-1">Our Print Methods</h2>
               <p className="section-sub reveal delay-2">Five production methods, one facility. We recommend what works best for your fabric, design, and volume.</p>
-              <div className="print-methods reveal delay-3">
-                <div className="print-method">
-                  <div className="print-num">01</div>
-                  <div>
-                    <div className="print-name">Dye Sublimation</div>
-                    <div className="print-desc">All-over print on polyester. Zero fade, zero cracking — our most popular method for fight wear, surfwear, and team kits.</div>
-                  </div>
-                </div>
-                <div className="print-method">
-                  <div className="print-num">02</div>
-                  <div>
-                    <div className="print-name">DTF — Direct to Film</div>
-                    <div className="print-desc">High-detail print on cotton and blended fabrics. Ideal for logo placement on casual and lifestyle garments.</div>
-                  </div>
-                </div>
-                <div className="print-method">
-                  <div className="print-num">03</div>
-                  <div>
-                    <div className="print-name">DTG — Direct to Garment</div>
-                    <div className="print-desc">Photographic-quality prints on light-colored garments. Best for short runs and intricate full-color artwork.</div>
-                  </div>
-                </div>
-                <div className="print-method">
-                  <div className="print-num">04</div>
-                  <div>
-                    <div className="print-name">Screen Printing</div>
-                    <div className="print-desc">Bold, high-volume graphics on cotton. Cost-effective at scale for branded casual and team wear.</div>
-                  </div>
-                </div>
-                <div className="print-method">
-                  <div className="print-num">05</div>
-                  <div>
-                    <div className="print-name">Technical Embroidery</div>
-                    <div className="print-desc">Premium finish for logos, crests, and patches. Available on hats, jackets, polos, and fight wear.</div>
-                  </div>
-                </div>
-              </div>
+              <PrintMethodsCarousel />
             </div>
           </div>
         </section>
 
         {/* FABRIC */}
         <section className="section-new fabric-section">
-          <div className="container-new">
-            <div className="products-header">
-              <div>
-                <p className="section-label reveal">Materials</p>
-                <Link href="/fabrics" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <h2 className="section-title hover-link reveal delay-1" style={{ cursor: 'pointer' }}>Fabric Engineering</h2>
-                </Link>
-                <p style={{ fontSize: '14px', color: '#6B6B68', lineHeight: 1.7, maxWidth: '480px' }} className="reveal delay-2">
-                  Every fabric tested for print compatibility, stretch recovery, and durability.
-                </p>
+          <div className="container-new two-col">
+            <div>
+              <p className="section-label reveal">Materials</p>
+              <Link href="/fabrics" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <h2 className="section-title hover-link reveal delay-1" style={{ cursor: 'pointer' }}>Fabric Engineering</h2>
+              </Link>
+              <p className="section-sub reveal delay-2">
+                Every fabric tested for print compatibility, stretch recovery, and durability. We carry options across different GSM weights, eco-certified materials, and specialty blends.
+              </p>
+              
+              <div className="fabric-explore reveal delay-3" style={{ marginTop: '0', padding: '24px', flexWrap: 'wrap' }}>
+                <div style={{ width: '100%' }}>
+                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '8px' }}>Fabric Sourcing</p>
+                  <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '24px', color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>Not Sure Which Fabric Is Right?</h3>
+                  <p style={{ fontSize: '13px', color: '#6B6B68', lineHeight: 1.7 }}>Get in touch and we'll match the right fabric to your product and print method.</p>
+                </div>
+                <div className="fabric-explore-btns" style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: '10px', marginTop: '16px' }}>
+                  <Link href="/fabrics" className="btn-primary-new">Explore Fabrics</Link>
+                  <Link href="/contact" className="btn-secondary-new">Request Samples</Link>
+                </div>
               </div>
             </div>
-            <div className="fabric-grid">
-              {FABRICS.slice(0, 4).map((f, index) => (
-                <Link key={f.name} href="/fabrics" className={`fabric-card reveal ${index > 0 ? `delay-${index}` : ''}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                  <div className="fabric-card-img"><img src={f.image} alt={f.name} /></div>
-                  <div className="fabric-body">
-                    <div className="fabric-name">{f.name}</div>
-                    <div className="fabric-desc">{f.description}</div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="fabric-explore reveal">
-              <div>
-                <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '8px' }}>Fabric Sourcing</p>
-                <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '28px', color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>Not Sure Which Fabric Is Right?</h3>
-                <p style={{ fontSize: '13px', color: '#6B6B68', lineHeight: 1.7, maxWidth: '560px' }}>We carry additional options — different GSM weights, eco-certified materials, and specialty blends. Get in touch and we'll match the right fabric to your product and print method.</p>
-              </div>
-              <div className="fabric-explore-btns">
-                <Link href="/fabrics" className="btn-primary-new" style={{ textAlign: 'center' }}>Explore All Fabrics</Link>
-                <Link href="/contact" className="btn-secondary-new" style={{ textAlign: 'center' }}>Request Fabric Samples</Link>
-              </div>
+            
+            <div style={{ alignSelf: 'center' }}>
+              <FabricsCarousel />
             </div>
           </div>
         </section>

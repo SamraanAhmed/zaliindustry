@@ -15,9 +15,9 @@ const CATEGORIES = [
 ];
 
 const HOW_IT_WORKS_LINKS = [
-  { label: "For Suppliers", href: "/how-it-works/supplier" },
-  { label: "For Brands", href: "/how-it-works/brand" },
-  { label: "For Individuals", href: "/how-it-works/individual" },
+  { label: "For Suppliers", href: "/how-it-works/suppliers" },
+  { label: "For Brands", href: "/how-it-works/brands" },
+  { label: "For Teams", href: "/how-it-works/teams" },
 ];
 
 const NAV_LINKS = [

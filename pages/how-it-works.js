@@ -5,8 +5,9 @@ export default function HowItWorks() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/how-it-works/brand');
+    router.replace('/how-it-works/brands');
   }, []);
 
   return null;
 }
+
