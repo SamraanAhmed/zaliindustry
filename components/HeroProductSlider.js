@@ -89,117 +89,116 @@ function DesktopAccordion() {
   );
 }
 
-/* ─── Mobile / Tablet: Touch Carousel ───────────────────── */
+/* ─── Mobile / Tablet: Sleek Scroller ───────────────────── */
 function MobileCarousel() {
-  const [current, setCurrent] = useState(0);
-  const [dragging, setDragging] = useState(false);
-  const [dragStartX, setDragStartX] = useState(0);
-  const [dragDelta, setDragDelta] = useState(0);
-  const timerRef = useRef(null);
-  const total = PANELS.length;
+  const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const resetTimer = () => {
-    clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setCurrent((p) => (p + 1) % total);
-    }, 3500);
+  // Initialize scroll position to allow immediate backward scrolling
+  useEffect(() => {
+    if (scrollRef.current && scrollRef.current.scrollLeft === 0) {
+      // Start in the middle of the track (beginning of the second duplicate set)
+      // This gives us an entire set of items to the left to scroll backwards into!
+      scrollRef.current.scrollLeft = 1; 
+    }
+  }, []);
+
+  const handleScrollBounds = () => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+    
+    const halfWidth = scrollContainer.scrollWidth / 2;
+    
+    // If scrolled past halfway going right
+    if (scrollContainer.scrollLeft >= halfWidth) {
+      scrollContainer.scrollLeft -= halfWidth;
+    } 
+    // If scrolled all the way left (backward)
+    else if (scrollContainer.scrollLeft <= 0) {
+      scrollContainer.scrollLeft += halfWidth;
+    }
   };
 
   useEffect(() => {
-    resetTimer();
-    return () => clearInterval(timerRef.current);
-  }, []);
+    let animationFrameId;
+    const scrollContainer = scrollRef.current;
+    
+    const play = () => {
+      if (!isDragging && scrollContainer) {
+        scrollContainer.scrollLeft += 1;
+        handleScrollBounds();
+      }
+      animationFrameId = requestAnimationFrame(play);
+    };
+    
+    play();
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isDragging]);
 
-  const goTo = (idx) => {
-    setCurrent((idx + total) % total);
-    resetTimer();
+  const onMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
   };
 
-  /* ── Touch & Mouse Drag ── */
-  const onDragStart = (clientX) => {
-    setDragging(true);
-    setDragStartX(clientX);
-    setDragDelta(0);
-    clearInterval(timerRef.current);
-  };
+  const onMouseLeave = () => setIsDragging(false);
+  const onMouseUp = () => setIsDragging(false);
 
-  const onDragMove = (clientX) => {
-    if (!dragging) return;
-    setDragDelta(clientX - dragStartX);
+  const onMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+    handleScrollBounds(); // Check bounds during drag
   };
-
-  const onDragEnd = () => {
-    if (!dragging) return;
-    setDragging(false);
-    if (dragDelta < -50) goTo(current + 1);
-    else if (dragDelta > 50) goTo(current - 1);
-    else resetTimer();
-    setDragDelta(0);
-  };
+  
+  const onTouchStart = () => setIsDragging(true);
+  const onTouchEnd = () => setIsDragging(false);
 
   return (
-    <div className="mob-carousel">
-      {/* Track */}
-      <div
-        className="mob-carousel__track-wrap"
-        onMouseDown={(e) => onDragStart(e.clientX)}
-        onMouseMove={(e) => onDragMove(e.clientX)}
-        onMouseUp={onDragEnd}
-        onMouseLeave={onDragEnd}
-        onTouchStart={(e) => onDragStart(e.touches[0].clientX)}
-        onTouchMove={(e) => onDragMove(e.touches[0].clientX)}
-        onTouchEnd={onDragEnd}
-        style={{ cursor: dragging ? "grabbing" : "grab" }}
-      >
-        <div
-          className="mob-carousel__track"
-          style={{
-            transform: `translateX(calc(${-current * 100}% + ${dragDelta}px))`,
-            transition: dragging ? "none" : "transform 0.55s cubic-bezier(0.77, 0, 0.175, 1)",
-          }}
-        >
+    <div 
+      className="mob-scroller-wrap"
+      ref={scrollRef}
+      onScroll={handleScrollBounds} // Check bounds during native touch scroll
+      onMouseDown={onMouseDown}
+      onMouseLeave={onMouseLeave}
+      onMouseUp={onMouseUp}
+      onMouseMove={onMouseMove}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+    >
+      <div className="mob-scroller-track">
+        <div className="mob-scroller">
           {PANELS.map((panel) => (
-            <Link
-              key={panel.id}
-              href={panel.href}
-              className="mob-carousel__slide"
-              draggable={false}
-              onClick={(e) => { if (Math.abs(dragDelta) > 5) e.preventDefault(); }}
-            >
-              <img src={panel.image} alt={panel.name} className="mob-carousel__img" draggable={false} />
-              <div className="mob-carousel__overlay" />
-              <div className="mob-carousel__info">
-                <span className="mob-carousel__tag">{panel.tag}</span>
-                <h3 className="mob-carousel__name">{panel.name}</h3>
-                <span className="mob-carousel__cta">View Collection →</span>
+            <Link key={panel.id} href={panel.href} className="mob-scroller__slide" draggable="false" onClick={(e) => isDragging && e.preventDefault()}>
+              <img src={panel.image} alt={panel.name} className="mob-scroller__img" draggable="false" />
+              <div className="mob-scroller__overlay" />
+              <div className="mob-scroller__info">
+                <span className="mob-scroller__tag">{panel.tag}</span>
+                <h3 className="mob-scroller__name">{panel.name}</h3>
+                <span className="mob-scroller__cta">View Collection →</span>
               </div>
             </Link>
           ))}
         </div>
-      </div>
-
-      {/* Prev / Next arrows */}
-      <button
-        className="mob-carousel__arrow mob-carousel__arrow--prev"
-        onClick={() => goTo(current - 1)}
-        aria-label="Previous"
-      >‹</button>
-      <button
-        className="mob-carousel__arrow mob-carousel__arrow--next"
-        onClick={() => goTo(current + 1)}
-        aria-label="Next"
-      >›</button>
-
-      {/* Dot indicators */}
-      <div className="mob-carousel__dots">
-        {PANELS.map((_, i) => (
-          <button
-            key={i}
-            className={`mob-carousel__dot ${i === current ? "mob-carousel__dot--active" : ""}`}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
+        
+        <div className="mob-scroller duplicate" aria-hidden="true">
+          {PANELS.map((panel) => (
+            <Link key={`dup-${panel.id}`} href={panel.href} className="mob-scroller__slide" tabIndex="-1" draggable="false" onClick={(e) => isDragging && e.preventDefault()}>
+              <img src={panel.image} alt={panel.name} className="mob-scroller__img" draggable="false" />
+              <div className="mob-scroller__overlay" />
+              <div className="mob-scroller__info">
+                <span className="mob-scroller__tag">{panel.tag}</span>
+                <h3 className="mob-scroller__name">{panel.name}</h3>
+                <span className="mob-scroller__cta">View Collection →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

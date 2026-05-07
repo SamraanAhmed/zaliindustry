@@ -297,7 +297,7 @@ export default function Navbar() {
                 alt="Zali Industry" 
                 width={120} 
                 height={45} 
-                className="object-contain"
+                className="object-contain logo-white"
               />
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} className="mobile-close-btn" aria-label="Close Menu">
@@ -314,7 +314,7 @@ export default function Navbar() {
                 className="mobile-accordion-btn"
                 aria-expanded={mobileProductsOpen}
               >
-                <span className={`mobile-accordion-label ${pathname.startsWith("/products") ? "active-text" : "text-black"}`}>
+                <span className={`mobile-accordion-label ${pathname.startsWith("/products") ? "active-text" : ""}`}>
                   Products
                 </span>
                 <div className={`mobile-accordion-icon-wrapper ${mobileProductsOpen ? "open" : ""}`}>
@@ -347,7 +347,7 @@ export default function Navbar() {
                 className="mobile-accordion-btn"
                 aria-expanded={mobileHowItWorksOpen}
               >
-                <span className={`mobile-accordion-label ${pathname.startsWith("/how-it-works") ? "active-text" : "text-black"}`}>
+                <span className={`mobile-accordion-label ${pathname.startsWith("/how-it-works") ? "active-text" : ""}`}>
                   How It Works
                 </span>
                 <div className={`mobile-accordion-icon-wrapper ${mobileHowItWorksOpen ? "open" : ""}`}>

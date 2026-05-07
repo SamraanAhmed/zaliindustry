@@ -422,27 +422,55 @@ export default function Home() {
               </p>
               <h2 className="section-title light reveal">What Our Clients Say</h2>
             </div>
-            <div className="testimonials-grid">
-              <div className="testimonial-card reveal">
-                <div className="t-quote">"</div>
-                <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
-                <div className="t-divider"></div>
-                <div className="t-name">Jake T.</div>
-                <div className="t-role">Fight Wear Brand Owner — California, USA</div>
-              </div>
-              <div className="testimonial-card reveal delay-1">
-                <div className="t-quote">"</div>
-                <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
-                <div className="t-divider"></div>
-                <div className="t-name">Coach Marcus R.</div>
-                <div className="t-role">Basketball Program — Hawaii, USA</div>
-              </div>
-              <div className="testimonial-card reveal delay-2">
-                <div className="t-quote">"</div>
-                <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
-                <div className="t-divider"></div>
-                <div className="t-name">Sophie L.</div>
-                <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
+            <div className="testimonials-track-wrapper">
+              <div className="testimonials-track">
+                <div className="testimonials-grid">
+                  <div className="testimonial-card reveal">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Jake T.</div>
+                    <div className="t-role">Fight Wear Brand Owner — California, USA</div>
+                  </div>
+                  <div className="testimonial-card reveal delay-1">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Coach Marcus R.</div>
+                    <div className="t-role">Basketball Program — Hawaii, USA</div>
+                  </div>
+                  <div className="testimonial-card reveal delay-2">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Sophie L.</div>
+                    <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
+                  </div>
+                </div>
+                
+                <div className="testimonials-grid duplicate" aria-hidden="true">
+                  <div className="testimonial-card">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Jake T.</div>
+                    <div className="t-role">Fight Wear Brand Owner — California, USA</div>
+                  </div>
+                  <div className="testimonial-card">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Coach Marcus R.</div>
+                    <div className="t-role">Basketball Program — Hawaii, USA</div>
+                  </div>
+                  <div className="testimonial-card">
+                    <div className="t-quote">"</div>
+                    <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
+                    <div className="t-divider"></div>
+                    <div className="t-name">Sophie L.</div>
+                    <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

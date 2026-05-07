@@ -34,12 +34,8 @@ const ProductsPage = () => {
       <Navbar />
 
       <main className="products-page">
-        <div className="shop-header" style={{ marginBottom: '48px', textAlign: 'center' }}>
-          <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '12px', fontWeight: 700, letterSpacing: '.15em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '16px' }}>Catalog</p>
+        <div className="shop-header" style={{ marginBottom: '30px', textAlign: 'center' }}>
           <h1 className="shop-title" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(48px, 5vw, 72px)', color: '#0A0A0A', marginBottom: '16px', lineHeight: 1 }}>ALL PERFORMANCE GEAR</h1>
-          <p className="shop-count" style={{ fontSize: '15px', color: '#6B6B68', maxWidth: '500px', margin: '0 auto', lineHeight: 1.6 }}>
-            Showing {filteredProducts.length} results. Custom-manufactured across nine categories. MOQ-friendly, export-ready.
-          </p>
         </div>
 
         {/* Top Horizontal Filter Section */}

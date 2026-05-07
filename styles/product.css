@@ -190,41 +190,39 @@
 }
 
 .btn-primary-hero {
-  background: #000;
-  color: #fff;
+  background: #0A0A0A;
+  color: #FFFFFF;
   padding: 1.25rem 3rem;
-  border-radius: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border: 1px solid #0A0A0A;
   white-space: nowrap;
 }
 
 .btn-primary-hero:hover {
-  transform: translateY(-4px);
+  opacity: 0.75;
 }
 
 .btn-secondary-hero {
-  background: #fff;
-  color: #000;
+  background: transparent;
+  color: #0A0A0A;
   padding: 1.25rem 3rem;
-  border-radius: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  border: 2px solid #e0e0e0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.1em;
+  border: 1px solid #0A0A0A;
+  transition: opacity 0.2s, background 0.2s;
   white-space: nowrap;
 }
 
 .btn-secondary-hero:hover {
-  border-color: #000;
-  transform: translateY(-4px);
-  background-color: #fafafa;
+  background: #fafafa;
 }
 
 @media (max-width: 640px) {
@@ -232,7 +230,6 @@
   .btn-secondary-hero {
     padding: 0.9rem 1.75rem;
     font-size: 0.85rem;
-    border-radius: 10px;
   }
 }
 
@@ -1252,7 +1249,8 @@
 
 @media (max-width: 640px) {
   .shop-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
   }
 }
 
@@ -1326,11 +1324,11 @@
 
 @media (max-width: 640px) {
   .products-page {
-    padding: 100px 20px 40px;
+    padding: 100px 10px 40px;
   }
   .products-grid-full {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 }
 
