@@ -373,6 +373,22 @@ export default function Navbar() {
               </div>
             </div>
 
+            {/* Additional Mobile-Only Links */}
+            <Link 
+              href="/categories" 
+              onClick={() => setMobileMenuOpen(false)}
+              className={`mobile-link ${pathname === "/categories" ? "active" : "inactive"}`}
+            >
+              Categories
+            </Link>
+            <Link 
+              href="/fabrics" 
+              onClick={() => setMobileMenuOpen(false)}
+              className={`mobile-link ${pathname === "/fabrics" ? "active" : "inactive"}`}
+            >
+              Fabrics
+            </Link>
+
             {/* Other Links */}
             {NAV_LINKS.map((link) => (
               <Link

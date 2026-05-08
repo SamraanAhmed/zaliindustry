@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FaFlask,
   FaIndustry,
@@ -12,7 +12,7 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function useCountUp(target, duration = 1800, start = false) {
+function useCountUp(target, duration = 1800, start = true) {
   const [value, setValue] = useState(0);
   useEffect(() => {
     if (!start) return;
@@ -28,41 +28,19 @@ function useCountUp(target, duration = 1800, start = false) {
   return value;
 }
 
-function useInView(threshold = 0.2) {
-  const ref = useRef(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setInView(true); obs.disconnect(); } },
-      { threshold }
-    );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, inView];
-}
-
-function StatCard({ value, suffix = "", label, inView }) {
-  const count = useCountUp(value, 1800, inView);
+function StatCard({ value, suffix = "", label }) {
+  const count = useCountUp(value, 1800, true);
   return (
-    <div className="about-stat-card">
-      <span className="about-stat-val">{count}{suffix}</span>
-      <span className="about-stat-label">{label}</span>
+    <div style={{ padding: '32px 24px', background: '#FFFFFF', border: '1px solid #E5E5E2', borderRadius: '4px', textAlign: 'center' }}>
+      <p style={{ fontSize: '48px', fontFamily: "'Bebas Neue', sans-serif", color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>
+        {count}{suffix}
+      </p>
+      <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: '#6B6B68' }}>
+        {label}
+      </p>
     </div>
   );
 }
-
-const SECTION_THEMES = [
-  { id: "s-hero",     bg: "#0a0a0a" },
-  { id: "s-intro",    bg: "#ffffff" },
-  { id: "s-stats",    bg: "#111111" },
-  { id: "s-origin",   bg: "#f4f4f4" },
-  { id: "s-values",   bg: "#fafafa" },
-  { id: "s-world",    bg: "#161616" },
-  { id: "s-cta",      bg: "#f0f0f0" },
-];
-
-
 
 const VALUES = [
   { Icon: FaFlask,          title: "Material Science",       desc: "We engineer at the fiber level — fabrics that adapt to body temperature, manage moisture, and endure elite demands." },
@@ -74,33 +52,6 @@ const VALUES = [
 ];
 
 export default function AboutPage() {
-  const [pageBg, setPageBg] = useState("#0a0a0a");
-  const [statsRef, statsInView] = useInView(0.3);
-  const [tlRef,    tlInView]    = useInView(0.1);
-  const [valRef,   valInView]   = useInView(0.1);
-  const [heroRef,  heroInView]  = useInView(0.1);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const theme = SECTION_THEMES.find((t) => t.id === entry.target.id);
-            if (theme) setPageBg(theme.bg);
-          }
-        });
-      },
-      { threshold: 0, rootMargin: "-45% 0px -45% 0px" }
-    );
-
-    SECTION_THEMES.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
       <Head>
@@ -109,169 +60,105 @@ export default function AboutPage() {
       </Head>
       <Navbar />
 
-      <main className="about-page" style={{ backgroundColor: pageBg }}>
-
-        {/* ── HERO ── */}
-        <section className="about-hero" id="s-hero" ref={heroRef}>
-          <div className="about-hero-content">
-            <h1 className={`about-hero-title ${heroInView ? "fade-up-in delay-1" : ""}`}>
-              Built by <br /><em>Engineers,</em><br />Not Marketers.
-            </h1>
-            <p className={`about-hero-sub ${heroInView ? "fade-up-in delay-2" : ""}`}>
-              Zali Industry is a direct manufacturer of high-performance sports apparel.
-              No middlemen. No compromises. Just precision — from our factory floor to you.
+      <main className="hiw-page">
+        {/* HERO */}
+        <section className="page-hero">
+          <div className="container">
+            <p className="page-hero-eyebrow">ABOUT ZALI INDUSTRY</p>
+            <h1>Built by Engineers,<br />Not Marketers.</h1>
+            <p>
+              Zali Industry is a direct manufacturer of high-performance sports apparel. No middlemen. No compromises. Just precision — from our factory floor to you.
             </p>
-            <div className={`about-hero-actions ${heroInView ? "fade-up-in delay-3" : ""}`}>
-              <Link href="/products" className="about-btn-primary">Explore Products</Link>
-              <Link href="/contact" className="about-btn-ghost">Get in Touch</Link>
-            </div>
-          </div>
-
-          {/* CSS-only geometric accent */}
-          <div className="hero-geo" aria-hidden="true">
-            <div className="geo-ring r1" />
-            <div className="geo-ring r2" />
-            <div className="geo-ring r3" />
-          </div>
-
-        </section>
-
-        {/* ── INTRO ── */}
-        <section className="about-intro-section" id="s-intro">
-          <div className="about-wrap">
-            <div className="about-intro-grid">
-              <div className="about-intro-label"><span>Our Philosophy</span></div>
-              <div className="about-intro-text">
-                <p>We are not a clothing brand. We are a <strong>materials laboratory</strong> dedicated to the science of human movement — built on obsessive R&amp;D and a relentless commitment to outperforming the industry standard.</p>
-                <p>Headquartered in Sialkot — the world's capital for sports manufacturing — we combine centuries of craftsmanship with modern engineering to produce apparel for elite athletes and everyday warriors alike.</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* ── STATS ── */}
-        <section className="about-stats-section" id="s-stats" ref={statsRef}>
-          <div className="about-wrap">
-            <div className="about-stats-grid">
-              <StatCard value={25}  suffix="+" label="Years of Manufacturing" inView={statsInView} />
-              <StatCard value={40}  suffix="+" label="Countries Served"        inView={statsInView} />
-              <StatCard value={100} suffix="%" label="In-House Production"     inView={statsInView} />
-              <StatCard value={0}   suffix=""  label="Middlemen. Ever."        inView={statsInView} />
-            </div>
-          </div>
-        </section>
-
-        {/* ── ORIGIN ── */}
-        <section className="about-origin-section" id="s-origin">
-          <div className="about-wrap">
-            <div className="about-origin-grid">
-              <div className="about-origin-panel">
-                <div className="origin-panel-year">1998</div>
-                <div className="origin-panel-sub">Year Founded</div>
-                <div className="origin-panel-divider" />
-                <div className="origin-panel-facts">
-                  {[
-                    { v: "Sialkot", k: "Location" },
-                    { v: "10K+",    k: "Units / Month" },
-                    { v: "25+",     k: "Yrs Experience" },
-                  ].map((f, i) => (
-                    <div key={i} className="origin-fact">
-                      <span className="fact-val">{f.v}</span>
-                      <span className="fact-key">{f.k}</span>
-                    </div>
-                  ))}
+        {/* INTRO & SIDEBAR */}
+        <section className="section">
+          <div className="container">
+            <div className="hiw-intro">
+              <div>
+                <p className="section-label">Our Philosophy</p>
+                <h2 className="section-title">Factory-Direct. No Compromises.</h2>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)', marginBottom: '20px' }}>
+                  We are not a clothing brand. We are a <strong>materials laboratory</strong> dedicated to the science of human movement — built on obsessive R&amp;D and a relentless commitment to outperforming the industry standard.
+                </p>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)' }}>
+                  Operating from our state-of-the-art facility in <strong>Sialkot, Pakistan</strong> — the world's capital for sports manufacturing — we combine centuries of craftsmanship with modern engineering to produce apparel for elite athletes and everyday warriors alike.
+                </p>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                    <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
+                    <strong>Model:</strong> Direct-to-Customer
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                    <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
+                    <strong>Expertise:</strong> 25+ Years Technical Textiles
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                    <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
+                    <strong>Capacity:</strong> 10,000+ Units / Month
+                  </div>
                 </div>
               </div>
-
-              <div className="about-origin-text-col">
-                <span className="section-eyebrow">Our Origin</span>
-                <h2 className="about-section-title">
-                  Factory-Direct.<br /><span className="title-muted">No Compromises.</span>
-                </h2>
-                <p className="about-section-body">
-                  Operating from our state-of-the-art facility in <strong>Sialkot, Pakistan</strong> — the world's capital for sports manufacturing — we utilize advanced machinery and decades of expertise to engineer world-class apparel.
-                </p>
-                <p className="about-section-body muted">
-                  Our vertical integration model means we control every step: raw fiber selection, weaving, cutting, stitching, quality inspection, and shipping — guaranteeing consistency and dramatically lower costs.
-                </p>
-                <div className="about-origin-tags">
-                  {[
-                    { k: "Model",    v: "Direct-to-Customer" },
-                    { k: "Expertise",v: "25+ Years Technical Textiles" },
-                    { k: "Capacity", v: "10,000+ Units / Month" },
-                  ].map((t, i) => (
-                    <div key={i} className="origin-tag">
-                      <strong>{t.k}</strong><span>{t.v}</span>
-                    </div>
-                  ))}
+              
+              <div className="hiw-sidebar">
+                <div className="hiw-cta-box">
+                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.35)', marginBottom: '12px' }}>
+                    Ready to start?
+                  </p>
+                  <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '28px', color: '#fff', lineHeight: 1, marginBottom: '16px' }}>
+                    Experience the Zali Difference
+                  </h3>
+                  <p style={{ fontSize: '13px', color: 'rgba(255,255,255,.45)', marginBottom: '24px', lineHeight: 1.7 }}>
+                    Whether you're a brand looking for a manufacturing partner, a team needing custom kits, or an individual seeking factory-direct quality — we're ready.
+                  </p>
+                  <Link href="/products" className="btn-primary" style={{ display: 'block', textAlign: 'center' }}>
+                    Explore Products
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        
-
-        {/* ── VALUES ── */}
-        <section className="about-values-section" id="s-values" ref={valRef}>
-          <div className="about-wrap">
-            <div className="about-values-header">
-              <span className="section-eyebrow">What We Stand For</span>
-              <h2 className="about-section-title">Six Principles.<br /><span className="title-muted">One Standard.</span></h2>
+        {/* STATS GRID */}
+        <section className="section" style={{ background: '#F6F6F4' }}>
+          <div className="container">
+            <p className="section-label">Global Impact</p>
+            <h2 className="section-title">Engineered in Pakistan.<br/>Worn Worldwide.</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '36px' }}>
+              <StatCard value={25}  suffix="+" label="Years of Manufacturing" />
+              <StatCard value={40}  suffix="+" label="Countries Served" />
+              <StatCard value={100} suffix="%" label="In-House Production" />
+              <StatCard value={0}   suffix=""  label="Middlemen. Ever." />
             </div>
-            <div className="about-values-grid">
-              {VALUES.map(({ Icon, title, desc }, i) => (
-                <div key={i} className={`about-value-card ${valInView ? "fade-up-in" : ""}`} style={{ animationDelay: `${i * 0.1}s` }}>
-                  <span className="value-icon"><Icon /></span>
-                  <h3 className="value-title">{title}</h3>
-                  <p className="value-desc">{desc}</p>
-                  <div className="value-card-line" />
+          </div>
+        </section>
+
+        {/* VALUES / PRINCIPLES */}
+        <section className="section">
+          <div className="container">
+            <p className="section-label">What We Stand For</p>
+            <h2 className="section-title">Six Principles.<br/>One Standard.</h2>
+            <div style={{ maxWidth: '680px', marginTop: '36px' }}>
+              {VALUES.map((val, i) => (
+                <div key={i} className="step-block">
+                  <div className="step-num">0{i+1}</div>
+                  <div>
+                    <div className="step-title" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <val.Icon size={16} /> {val.title}
+                    </div>
+                    <p className="step-body">{val.desc}</p>
+                  </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── WORLD STATS ── */}
-        <section className="about-world-section" id="s-world">
-          <div className="about-wrap">
-            <span className="section-eyebrow light">Global Impact</span>
-            <h2 className="about-section-title light">Engineered in Pakistan.<br /><em>Worn Worldwide.</em></h2>
-            <p className="about-section-body light-muted">
-              From professional European football clubs to individual athletes training in New York — Zali-made gear is pushing human performance across every continent.
-            </p>
-            <div className="about-world-stats">
-              {[
-                { v: "40+",  l: "Countries" },
-                { v: "500+", l: "Brand Partners" },
-                { v: "1M+",  l: "Units Produced" },
-              ].map((s, i) => (
-                <div key={i} className="world-stat">
-                  <span>{s.v}</span><label>{s.l}</label>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── CTA ── */}
-        <section className="about-cta-section" id="s-cta">
-          <div className="about-wrap">
-            <div className="about-cta-inner">
-              <div className="about-cta-text">
-                <span className="section-eyebrow">Ready to Work Together?</span>
-                <h2>Experience the <br /><span className="cta-accent">Zali Difference.</span></h2>
-                <p>Whether you're a brand looking for a manufacturing partner, a team needing custom kits, or an individual seeking factory-direct quality — we're ready.</p>
-              </div>
-              <div className="about-cta-buttons">
-                <Link href="/products" className="about-btn-primary large">View Catalog</Link>
-                <Link href="/contact" className="about-btn-outline large">Request a Quote</Link>
-              </div>
             </div>
           </div>
         </section>
 
       </main>
+
       <Footer />
     </>
   );
