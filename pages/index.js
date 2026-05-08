@@ -17,7 +17,7 @@ const paymentLogos = [
   { node: <SiPayoneer />, title: "Payoneer" },
   { node: <span style={{ fontWeight: 800, fontFamily: 'Arial, sans-serif' }}>Remitly</span>, title: "Remitly" },
   { node: <SiWesternunion />, title: "Western Union" },
-  { node: <span style={{ fontWeight: 800, fontFamily: 'Arial, sans-serif', color: '#ff6600', textTransform: 'lowercase' }}>ria</span>, title: "Ria" },
+  { node: <span style={{ fontWeight: 800, fontFamily: 'Arial, sans-serif', color: '#000000ff', textTransform: 'lowercase' }}>ria</span>, title: "Ria" },
   { node: <SiMoneygram />, title: "MoneyGram" },
 ];
 const PRINT_METHODS = [
@@ -186,7 +186,6 @@ export default function Home() {
               <p className="section-label">Browse Range</p>
               <h2 className="section-title">Shop by Category</h2>
             </div>
-            <Link href="/products" className="btn-ghost-new reveal delay-2">View All →</Link>
           </div>
           <div className="category-grid">
             <Link href="/products?cat=Running Shoes" className="cat-card reveal">
@@ -226,6 +225,9 @@ export default function Home() {
               </div>
             </Link>
           </div>
+          <div className="section-footer-link">
+            <Link href="/products" className="btn-ghost-new reveal">View All Categories →</Link>
+          </div>
         </section>
 
         {/* FEATURED PRODUCTS */}
@@ -236,12 +238,14 @@ export default function Home() {
                 <p className="section-label">Selected Range</p>
                 <h2 className="section-title">Featured Essentials</h2>
               </div>
-              <Link href="/products" className="btn-ghost-new reveal delay-2">View All Products →</Link>
             </div>
             <div className="products-grid">
               {featuredProducts.map((product, index) => (
                 <ProductCard key={product.id} product={product} index={index} />
               ))}
+            </div>
+            <div className="section-footer-link">
+              <Link href="/products" className="btn-ghost-new reveal">View All Products →</Link>
             </div>
           </div>
         </section>
@@ -257,9 +261,6 @@ export default function Home() {
                 <h2 className="section-title light reveal">How It Works</h2>
                 <p className="section-sub light reveal delay-1">From your first sketch to the final shipment — we manage the entire production cycle in-house. No middlemen. No guesswork.</p>
               </div>
-              <Link href="/how-it-works-brands" className="btn-ghost-new reveal" style={{ color: 'rgba(255,255,255,.4)', borderColor: 'rgba(255,255,255,.15)' }}>
-                Full Process →
-              </Link>
             </div>
             <div className="process-grid">
               <div className="process-step reveal">
@@ -306,9 +307,14 @@ export default function Home() {
                 <p className="process-desc">Direct to the US, UK, EU, and beyond. Tracked, packaged to your spec, and retail-ready from day one.</p>
               </div>
             </div>
+            <div className="section-footer-link">
+              <Link href="/how-it-works-brands" className="btn-ghost-new reveal" style={{ color: 'rgba(255,255,255,.4)', borderColor: 'rgba(255,255,255,.15)' }}>
+                Full Process →
+              </Link>
+            </div>
           </div>
         </section>
-
+ 
         {/* CUSTOM + PRINT */}
         <section className="section-new">
           <div className="container-new two-col">

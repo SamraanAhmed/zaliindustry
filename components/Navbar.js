@@ -225,11 +225,11 @@ export default function Navbar() {
                 className="action-icon-btn"
                 onClick={() => setSearchOpen(true)}
               >
-                <FaSearch size={15} />
+                <FaSearch size={20} />
               </button>
               
               <Link href="/cart" aria-label="Quote Request List" className="action-icon-btn">
-                <FaShoppingBag size={15} />
+                <FaShoppingBag size={20} />
                 <span className="action-icon-badge">{quoteItems.length}</span>
               </Link>
             </div>

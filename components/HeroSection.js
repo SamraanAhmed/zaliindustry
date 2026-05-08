@@ -11,11 +11,11 @@ const HeroSection = () => {
         {/* Left: Text */}
         <div className="hero-text-content animate-fade-up">
           <h1 className="hero-tagline">
-            <GradientText colors={["#000000", "#777777", "#000000"]} animationSpeed={5} className="hero-gradient-text">
-              Built by<br />
-              <em>Engineers,</em><br />
-              Not Marketers.
-            </GradientText>
+            Built by<br />
+            <GradientText colors={["#000000", "#a0a0a0", "#000000"]} animationSpeed={5} className="hero-gradient-text">
+              <em>Engineers,</em>
+            </GradientText><br />
+            Not Marketers.
           </h1>
 
           <p className="hero-description">

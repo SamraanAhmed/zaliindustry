@@ -10,10 +10,11 @@
 }
 
 .contact-header h1 {
-  font-size: 4rem;
-  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 1px;
   margin-bottom: 1.5rem;
 }
 
@@ -35,7 +36,7 @@
   background: #fdfdfd;
   border: 1px solid #eee;
   padding: 4rem 3rem;
-  border-radius: 20px;
+  border-radius: 0px;
   text-align: center;
   transition: all 0.3s;
   display: flex;
@@ -65,10 +66,11 @@
 }
 
 .contact-card-box h3 {
-  font-weight: 900;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
 }
 
 .contact-card-box p {
@@ -82,17 +84,19 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 4rem;
   align-items: center;
-  background: #000;
+  background: #0E0E0C;
   color: #fff;
   padding: 6rem;
-  border-radius: 32px;
+  border-radius: 0px;
 }
 
 .location-info h2 {
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  letter-spacing: 1px;
 }
 
 .location-info p {
@@ -106,14 +110,17 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .location-map-stub {
   background: rgba(255,255,255,0.05);
   height: 350px;
-  border-radius: 16px;
+  border-radius: 0px;
   display: flex;
   align-items: center;
   justify-content: center;

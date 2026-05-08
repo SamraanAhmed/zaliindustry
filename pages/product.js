@@ -144,7 +144,10 @@ const ProductDetailPage = () => {
         {/* BOTTOM: Related Collection */}
         {relatedProducts.length > 0 && (
           <section className="related-section">
-            <h2 className="section-title">Related Items</h2>
+            <div style={{ textAlign: 'center', marginBottom: '44px' }}>
+              <p className="section-label">Selected Collection</p>
+              <h2 className="section-title">Related Items</h2>
+            </div>
             <div className="product-grid" style={{ padding: '0' }}>
               {relatedProducts.map(item => (
                 <ProductCard key={item.id} product={item} />

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Navbar from '../../components/Navbar';
@@ -10,11 +10,43 @@ export default function HowItWorksDetail() {
   const router = useRouter();
   const { type } = router.query;
   const [openFaq, setOpenFaq] = useState(null);
+  const [eyebrowOpen, setEyebrowOpen] = useState(false);
+  const eyebrowRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (eyebrowRef.current && !eyebrowRef.current.contains(event.target)) {
+        setEyebrowOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [type]); // Re-run when switching between Brands/Suppliers/Teams
 
   if (!type || !howItWorksData[type]) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p>Loading Documentation...</p>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0E0E0C', color: '#fff' }}>
+        <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: '0.1em' }}>LOADING DOCUMENTATION...</p>
       </div>
     );
   }
@@ -34,15 +66,28 @@ export default function HowItWorksDetail() {
       <Navbar />
 
       <main className="hiw-page">
-        <section className="page-hero">
+        <section className="page-hero reveal">
           <div className="container">
-            <p className="page-hero-eyebrow">{data.heroEyebrow}</p>
+            <div className="page-hero-eyebrow">
+               <span>HOW IT WORKS</span>
+               <div className="eyebrow-dropdown" ref={eyebrowRef}>
+                  <div className="eyebrow-dropdown-trigger" onClick={() => setEyebrowOpen(!eyebrowOpen)}>
+                    / For {type.charAt(0).toUpperCase() + type.slice(1)} 
+                    <span style={{ fontSize: '10px', marginLeft: '6px', opacity: 0.5 }}>▼</span>
+                  </div>
+                  <div className={`eyebrow-menu ${eyebrowOpen ? 'open' : ''}`}>
+                    <Link href="/how-it-works/brands" className={`eyebrow-item ${type === 'brands' ? 'active' : ''}`}>For Brands</Link>
+                    <Link href="/how-it-works/suppliers" className={`eyebrow-item ${type === 'suppliers' ? 'active' : ''}`}>For Suppliers</Link>
+                    <Link href="/how-it-works/teams" className={`eyebrow-item ${type === 'teams' ? 'active' : ''}`}>For Teams</Link>
+                  </div>
+               </div>
+            </div>
             <h1>{data.heroTitle}</h1>
             <p>{data.heroDesc}</p>
           </div>
         </section>
 
-        <section className="section">
+        <section className="section reveal">
           <div className="container">
             <div className="hiw-intro">
               <div>
@@ -95,17 +140,6 @@ export default function HowItWorksDetail() {
                     {data.sidebar.btnText}
                   </Link>
                 </div>
-                <div className="hiw-links">
-                  <Link href="/how-it-works/brands" className={`hiw-link ${type === 'brands' ? 'current' : ''}`}>
-                    For Brands →
-                  </Link>
-                  <Link href="/how-it-works/suppliers" className={`hiw-link ${type === 'suppliers' ? 'current' : ''}`}>
-                    For Suppliers →
-                  </Link>
-                  <Link href="/how-it-works/teams" className={`hiw-link ${type === 'teams' ? 'current' : ''}`}>
-                    For Teams →
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -113,7 +147,7 @@ export default function HowItWorksDetail() {
             <h2 className="section-title">{data.processTitle}</h2>
             <div style={{ maxWidth: '680px', marginTop: '36px' }}>
               {data.steps.map((step, i) => (
-                <div key={i} className="step-block">
+                <div key={i} className={`step-block reveal delay-${i+1}`}>
                   <div className="step-num">{step.num}</div>
                   <div>
                     <div className="step-title">{step.title}</div>
@@ -126,7 +160,7 @@ export default function HowItWorksDetail() {
         </section>
 
         {data.hasMoq && (
-          <section className="section" style={{ background: 'var(--off-white, #F6F6F4)' }}>
+          <section className="section reveal" style={{ background: 'var(--off-white, #F6F6F4)' }}>
             <div className="container">
               <p className="section-label">{data.moqLabel}</p>
               <h2 className="section-title">{data.moqTitle}</h2>
@@ -154,7 +188,7 @@ export default function HowItWorksDetail() {
         )}
 
         {data.hasFaq && (
-          <section className="section">
+          <section className="section reveal">
             <div className="container">
               <p className="section-label">{data.faqLabel}</p>
               <h2 className="section-title">{data.faqTitle}</h2>

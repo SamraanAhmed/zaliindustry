@@ -40,7 +40,8 @@
 
 .section-eyebrow {
   display: inline-block;
-  font-size: 0.68rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -50,10 +51,11 @@
 .section-eyebrow.light { color: rgba(255,255,255,0.45); }
 
 .about-section-title {
-  font-size: clamp(2rem, 4.5vw, 3.6rem);
-  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 1px;
   line-height: 1.0;
   color: #000;
   margin-bottom: 1.75rem;
@@ -63,9 +65,9 @@
 .about-section-title.light em { color: rgba(255,255,255,0.35); }
 .title-muted { color: #ccc; }
 
-.about-section-body { font-size: 1.05rem; line-height: 1.85; color: #444; margin-bottom: 1.5rem; max-width: 560px; }
-.about-section-body.muted      { color: #888; font-size: 0.93rem; }
-.about-section-body.light-muted { color: rgba(255,255,255,0.55); max-width: 560px; }
+.about-section-body { font-size: 1.15rem; line-height: 1.85; color: #222; margin-bottom: 1.5rem; max-width: 560px; }
+.about-section-body.muted      { color: #444; font-size: 1rem; }
+.about-section-body.light-muted { color: rgba(255,255,255,0.75); max-width: 560px; }
 
 /* ─────────────────────────────────────────────────
    HERO  (dark: #0a0a0a)
@@ -92,7 +94,8 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.7rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -107,10 +110,11 @@
 }
 
 .about-hero-title {
-  font-size: clamp(3.5rem, 9vw, 8rem);
-  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -4px;
+  letter-spacing: 2px;
   line-height: 0.9;
   color: #fff;
   margin-bottom: 2.5rem;
@@ -118,9 +122,9 @@
 .about-hero-title em { font-style: italic; font-weight: 300; color: rgba(255,255,255,0.35); }
 
 .about-hero-sub {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   max-width: 500px;
   margin-bottom: 3rem;
 }
@@ -174,7 +178,8 @@
   animation: scrollPulse 2.2s ease-in-out infinite;
 }
 .about-scroll-hint span {
-  font-size: 0.58rem; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
   writing-mode: vertical-rl;
@@ -186,7 +191,8 @@
 .about-btn-primary {
   display: inline-flex; align-items: center; justify-content: center;
   background: var(--accent-color); color: #fff;
-  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid var(--accent-color);
   transition: background 0.3s, color 0.3s;
@@ -197,7 +203,8 @@
 .about-btn-ghost {
   display: inline-flex; align-items: center; justify-content: center;
   background: transparent; color: #fff;
-  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid rgba(255,255,255,0.3);
   transition: background 0.3s, border-color 0.3s;
@@ -207,7 +214,8 @@
 .about-btn-outline {
   display: inline-flex; align-items: center; justify-content: center;
   background: transparent; color: #000;
-  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid #000;
   transition: background 0.3s, color 0.3s;
@@ -229,7 +237,8 @@
 @media (max-width: 768px) { .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
 .about-intro-label span {
-  font-size: 0.68rem; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em; color: #bbb;
   writing-mode: vertical-rl; transform: rotate(180deg);
 }
@@ -266,13 +275,15 @@
 
 .about-stat-val {
   display: block;
-  font-size: clamp(3rem, 5.5vw, 5rem);
-  font-weight: 900; letter-spacing: -3px; color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 400; letter-spacing: 1px; color: #fff;
   line-height: 1; margin-bottom: 0.75rem;
 }
 .about-stat-label {
   display: block;
-  font-size: 0.65rem; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
 }
@@ -301,14 +312,16 @@
   top: 100px;
 }
 .origin-panel-year {
-  font-size: clamp(4rem, 7vw, 6.5rem);
-  font-weight: 900;
-  letter-spacing: -4px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: 1px;
   color: #fff;
   line-height: 1;
 }
 .origin-panel-sub {
-  font-size: 0.65rem; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
   margin-top: 0.5rem; margin-bottom: 2rem;
@@ -319,8 +332,8 @@
 .origin-panel-facts { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .origin-fact { display: flex; flex-direction: column; gap: 0.2rem; }
-.fact-val { font-size: 1.4rem; font-weight: 900; letter-spacing: -1px; color: #fff; }
-.fact-key { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); }
+.fact-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 1px; color: #fff; }
+.fact-key { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); }
 
 .about-origin-text-col { padding-top: 0.5rem; }
 
@@ -329,7 +342,7 @@
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem 0; border-bottom: 1px solid #e0e0e0;
 }
-.origin-tag strong { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #000; }
+.origin-tag strong { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #000; }
 .origin-tag span   { font-size: 0.85rem; color: #666; font-weight: 500; }
 
 /* ─────────────────────────────────────────────────
@@ -350,7 +363,7 @@
 .about-timeline-item.fade-up-in { opacity: 1; }
 @media (max-width: 640px) { .about-timeline-item { grid-template-columns: 60px 36px 1fr; gap: 0 1rem; } }
 
-.tl-year { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); padding-top: 0.2rem; text-align: right; }
+.tl-year { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); padding-top: 0.2rem; text-align: right; }
 
 .tl-connector { display: flex; flex-direction: column; align-items: center; }
 .tl-dot {
@@ -365,7 +378,7 @@
 }
 
 .tl-content { padding-bottom: 4rem; }
-.tl-content h3 { font-size: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; color: #fff; margin-bottom: 0.6rem; }
+.tl-content h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.6rem; }
 .tl-content p  { font-size: 0.9rem; line-height: 1.75; color: rgba(255,255,255,0.4); max-width: 480px; }
 
 /* ─────────────────────────────────────────────────
@@ -414,7 +427,7 @@
   margin-bottom: 0.25rem;
 }
 .value-icon svg { width: 1.6rem; height: 1.6rem; }
-.value-title { font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #000; }
+.value-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #000; }
 .value-desc  { font-size: 0.87rem; line-height: 1.75; color: #666; flex: 1; }
 .value-card-line { height: 1px; background: #ebebeb; width: 36px; }
 
@@ -437,12 +450,14 @@
 
 .world-stat span {
   display: block;
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  font-weight: 900; letter-spacing: -3px; color: #fff; line-height: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: 400; letter-spacing: 1px; color: #fff; line-height: 1;
 }
 .world-stat label {
   display: block;
-  font-size: 0.65rem; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
   margin-top: 0.6rem;
@@ -462,9 +477,10 @@
 @media (max-width: 768px) { .about-cta-inner { grid-template-columns: 1fr; gap: 3rem; } }
 
 .about-cta-text h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 900; text-transform: uppercase;
-  letter-spacing: -3px; line-height: 0.95;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400; text-transform: uppercase;
+  letter-spacing: 1px; line-height: 0.95;
   color: #000; margin-bottom: 1.5rem;
 }
 .cta-accent { color: var(--accent-color); }

@@ -52,6 +52,26 @@ const VALUES = [
 ];
 
 export default function AboutPage() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Head>
@@ -62,7 +82,7 @@ export default function AboutPage() {
 
       <main className="hiw-page">
         {/* HERO */}
-        <section className="page-hero">
+        <section className="page-hero reveal">
           <div className="container">
             <p className="page-hero-eyebrow">ABOUT ZALI INDUSTRY</p>
             <h1>Built by Engineers,<br />Not Marketers.</h1>
@@ -73,7 +93,7 @@ export default function AboutPage() {
         </section>
 
         {/* INTRO & SIDEBAR */}
-        <section className="section">
+        <section className="section reveal">
           <div className="container">
             <div className="hiw-intro">
               <div>
@@ -123,7 +143,7 @@ export default function AboutPage() {
         </section>
 
         {/* STATS GRID */}
-        <section className="section" style={{ background: '#F6F6F4' }}>
+        <section className="section reveal" style={{ background: '#F6F6F4' }}>
           <div className="container">
             <p className="section-label">Global Impact</p>
             <h2 className="section-title">Engineered in Pakistan.<br/>Worn Worldwide.</h2>
@@ -137,13 +157,13 @@ export default function AboutPage() {
         </section>
 
         {/* VALUES / PRINCIPLES */}
-        <section className="section">
+        <section className="section reveal">
           <div className="container">
             <p className="section-label">What We Stand For</p>
             <h2 className="section-title">Six Principles.<br/>One Standard.</h2>
             <div style={{ maxWidth: '680px', marginTop: '36px' }}>
               {VALUES.map((val, i) => (
-                <div key={i} className="step-block">
+                <div key={i} className={`step-block reveal delay-${i+1}`}>
                   <div className="step-num">0{i+1}</div>
                   <div>
                     <div className="step-title" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
