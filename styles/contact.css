@@ -10,7 +10,7 @@
 }
 
 .contact-header h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 400;
   text-transform: uppercase;
@@ -66,7 +66,7 @@
 }
 
 .contact-card-box h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -91,7 +91,7 @@
 }
 
 .location-info h2 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 3rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -110,7 +110,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   text-transform: uppercase;

@@ -127,9 +127,13 @@ export default function Navbar() {
               <nav className="desktop-nav">
                 <div className="nav-pill-container">
                   {/* Products Dropdown */}
-                  <div className="dropdown-relative" ref={productsDropdownRef}>
+                  <div 
+                    className="dropdown-relative" 
+                    ref={productsDropdownRef}
+                    onMouseEnter={() => setProductsDropdownOpen(true)}
+                    onMouseLeave={() => setProductsDropdownOpen(false)}
+                  >
                     <button
-                      onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
                       className={`nav-pill-link ${pathname.startsWith("/products") ? "active" : "inactive"}`}
                       aria-expanded={productsDropdownOpen}
                       aria-haspopup="true"
@@ -159,9 +163,13 @@ export default function Navbar() {
                   </div>
 
                   {/* How It Works Dropdown */}
-                  <div className="dropdown-relative" ref={howItWorksDropdownRef}>
+                  <div 
+                    className="dropdown-relative" 
+                    ref={howItWorksDropdownRef}
+                    onMouseEnter={() => setHowItWorksDropdownOpen(true)}
+                    onMouseLeave={() => setHowItWorksDropdownOpen(false)}
+                  >
                     <button
-                      onClick={() => setHowItWorksDropdownOpen(!howItWorksDropdownOpen)}
                       className={`nav-pill-link ${pathname.startsWith("/how-it-works") ? "active" : "inactive"}`}
                       aria-expanded={howItWorksDropdownOpen}
                       aria-haspopup="true"

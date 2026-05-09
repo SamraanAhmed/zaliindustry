@@ -15,11 +15,17 @@
 }
 
 body {
-  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
   color: var(--text-main);
   background-color: var(--secondary-color);
-  line-height: 1.8;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 700;
 }
 
 header, footer, main {

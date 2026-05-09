@@ -12,9 +12,7 @@ const HeroSection = () => {
         <div className="hero-text-content animate-fade-up">
           <h1 className="hero-tagline">
             Built by<br />
-            <GradientText colors={["#000000", "#a0a0a0", "#000000"]} animationSpeed={5} className="hero-gradient-text">
-              <em>Engineers,</em>
-            </GradientText><br />
+            <GradientText colors={["#000000", "#a0a0a0", "#000000"]} animationSpeed={5} className="hero-gradient-text"><em>Engineers,</em></GradientText><br />
             Not Marketers.
           </h1>
 

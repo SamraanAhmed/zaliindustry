@@ -70,7 +70,7 @@
   .hero-layout-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 3rem 1.5rem 2.5rem;
   }
 }
@@ -78,7 +78,7 @@
 @media (max-width: 640px) {
   .hero-layout-container {
     padding: 2rem 1.25rem 1.5rem;
-    gap: 1.5rem;
+    gap: 4rem;
   }
 }
 
@@ -112,7 +112,7 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -2px;
-  line-height: 0.95;
+  line-height: 0.85;
   color: #000;
   margin-bottom: 2rem;
   border-left: 3px solid #000;
@@ -122,6 +122,11 @@
 .hero-tagline em {
   font-style: italic;
   font-weight: 500;
+}
+
+.hero-gradient-text {
+  line-height: inherit;
+  vertical-align: top;
 }
 
 @media (max-width: 1024px) {
@@ -191,7 +196,7 @@
   background: #0A0A0A;
   color: #FFFFFF;
   padding: 1.25rem 3rem;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.95rem;
@@ -209,7 +214,7 @@
   background: transparent;
   color: #0A0A0A;
   padding: 1.25rem 3rem;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.95rem;
@@ -459,7 +464,7 @@
 }
 
 .product-page-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 400;
   text-transform: uppercase;
@@ -470,7 +475,7 @@
 }
 
 .breadcrumb-category {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   color: #6B6B68;
   font-weight: 700;
   text-transform: uppercase;
@@ -501,7 +506,7 @@
 }
 
 .options-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -536,7 +541,7 @@
 }
 
 .fabric-option span {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -575,7 +580,7 @@
   color: #FFFFFF;
   padding: 1.25rem;
   border-radius: 0px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
@@ -597,7 +602,7 @@
   color: #0A0A0A;
   padding: 1.25rem;
   border-radius: 0px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
@@ -1310,7 +1315,7 @@
 }
 
 .products-filters .filter-btn {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: .1em;

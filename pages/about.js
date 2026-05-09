@@ -32,10 +32,10 @@ function StatCard({ value, suffix = "", label }) {
   const count = useCountUp(value, 1800, true);
   return (
     <div style={{ padding: '32px 24px', background: '#FFFFFF', border: '1px solid #E5E5E2', borderRadius: '4px', textAlign: 'center' }}>
-      <p style={{ fontSize: '48px', fontFamily: "'Bebas Neue', sans-serif", color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>
+      <p style={{ fontSize: '48px', fontFamily: "'Alumni Sans', sans-serif", color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>
         {count}{suffix}
       </p>
-      <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: '#6B6B68' }}>
+      <p style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: '#6B6B68' }}>
         {label}
       </p>
     </div>
@@ -99,23 +99,23 @@ export default function AboutPage() {
               <div>
                 <p className="section-label">Our Philosophy</p>
                 <h2 className="section-title">Factory-Direct. No Compromises.</h2>
-                <p style={{ fontSize: '14px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)', marginBottom: '20px' }}>
+                <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)', marginBottom: '20px' }}>
                   We are not a clothing brand. We are a <strong>materials laboratory</strong> dedicated to the science of human movement — built on obsessive R&amp;D and a relentless commitment to outperforming the industry standard.
                 </p>
-                <p style={{ fontSize: '14px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)' }}>
+                <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--text-secondary, #6B6B68)' }}>
                   Operating from our state-of-the-art facility in <strong>Sialkot, Pakistan</strong> — the world's capital for sports manufacturing — we combine centuries of craftsmanship with modern engineering to produce apparel for elite athletes and everyday warriors alike.
                 </p>
                 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '24px' }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '14px', color: 'var(--text-secondary, #6B6B68)' }}>
                     <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
                     <strong>Model:</strong> Direct-to-Customer
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '14px', color: 'var(--text-secondary, #6B6B68)' }}>
                     <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
                     <strong>Expertise:</strong> 25+ Years Technical Textiles
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '13px', color: 'var(--text-secondary, #6B6B68)' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '14px', color: 'var(--text-secondary, #6B6B68)' }}>
                     <span style={{ color: 'var(--black, #000)', fontWeight: 700, flexShrink: 0 }}>—</span>
                     <strong>Capacity:</strong> 10,000+ Units / Month
                   </div>
@@ -124,13 +124,13 @@ export default function AboutPage() {
               
               <div className="hiw-sidebar">
                 <div className="hiw-cta-box">
-                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.35)', marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.35)', marginBottom: '12px' }}>
                     Ready to start?
                   </p>
-                  <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '28px', color: '#fff', lineHeight: 1, marginBottom: '16px' }}>
+                  <h3 style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '28px', color: '#fff', lineHeight: 1, marginBottom: '16px' }}>
                     Experience the Zali Difference
                   </h3>
-                  <p style={{ fontSize: '13px', color: 'rgba(255,255,255,.45)', marginBottom: '24px', lineHeight: 1.7 }}>
+                  <p style={{ fontSize: '16px', color: 'rgba(255,255,255,.45)', marginBottom: '24px', lineHeight: 1.7 }}>
                     Whether you're a brand looking for a manufacturing partner, a team needing custom kits, or an individual seeking factory-direct quality — we're ready.
                   </p>
                   <Link href="/products" className="btn-primary" style={{ display: 'block', textAlign: 'center' }}>

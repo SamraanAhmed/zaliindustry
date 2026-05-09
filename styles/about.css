@@ -40,7 +40,7 @@
 
 .section-eyebrow {
   display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 .section-eyebrow.light { color: rgba(255,255,255,0.45); }
 
 .about-section-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   text-transform: uppercase;
@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -110,7 +110,7 @@
 }
 
 .about-hero-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 400;
   text-transform: uppercase;
@@ -178,7 +178,7 @@
   animation: scrollPulse 2.2s ease-in-out infinite;
 }
 .about-scroll-hint span {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.65rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
@@ -191,7 +191,7 @@
 .about-btn-primary {
   display: inline-flex; align-items: center; justify-content: center;
   background: var(--accent-color); color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid var(--accent-color);
@@ -203,7 +203,7 @@
 .about-btn-ghost {
   display: inline-flex; align-items: center; justify-content: center;
   background: transparent; color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid rgba(255,255,255,0.3);
@@ -214,7 +214,7 @@
 .about-btn-outline {
   display: inline-flex; align-items: center; justify-content: center;
   background: transparent; color: #000;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em;
   padding: 0 2rem; height: 50px; border-radius: 4px;
   text-decoration: none; border: 1.5px solid #000;
@@ -237,7 +237,7 @@
 @media (max-width: 768px) { .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
 .about-intro-label span {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.75rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em; color: #bbb;
   writing-mode: vertical-rl; transform: rotate(180deg);
@@ -275,14 +275,14 @@
 
 .about-stat-val {
   display: block;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(3.5rem, 6vw, 6rem);
   font-weight: 400; letter-spacing: 1px; color: #fff;
   line-height: 1; margin-bottom: 0.75rem;
 }
 .about-stat-label {
   display: block;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
@@ -312,7 +312,7 @@
   top: 100px;
 }
 .origin-panel-year {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(4.5rem, 8vw, 7.5rem);
   font-weight: 400;
   letter-spacing: 1px;
@@ -320,7 +320,7 @@
   line-height: 1;
 }
 .origin-panel-sub {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
@@ -332,8 +332,8 @@
 .origin-panel-facts { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .origin-fact { display: flex; flex-direction: column; gap: 0.2rem; }
-.fact-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 1px; color: #fff; }
-.fact-key { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); }
+.fact-val { font-family: 'Alumni Sans', sans-serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 1px; color: #fff; }
+.fact-key { font-family: 'Alumni Sans', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); }
 
 .about-origin-text-col { padding-top: 0.5rem; }
 
@@ -342,7 +342,7 @@
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem 0; border-bottom: 1px solid #e0e0e0;
 }
-.origin-tag strong { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #000; }
+.origin-tag strong { font-family: 'Alumni Sans', sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #000; }
 .origin-tag span   { font-size: 0.85rem; color: #666; font-weight: 500; }
 
 /* ─────────────────────────────────────────────────
@@ -363,7 +363,7 @@
 .about-timeline-item.fade-up-in { opacity: 1; }
 @media (max-width: 640px) { .about-timeline-item { grid-template-columns: 60px 36px 1fr; gap: 0 1rem; } }
 
-.tl-year { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); padding-top: 0.2rem; text-align: right; }
+.tl-year { font-family: 'Alumni Sans', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); padding-top: 0.2rem; text-align: right; }
 
 .tl-connector { display: flex; flex-direction: column; align-items: center; }
 .tl-dot {
@@ -378,7 +378,7 @@
 }
 
 .tl-content { padding-bottom: 4rem; }
-.tl-content h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.6rem; }
+.tl-content h3 { font-family: 'Alumni Sans', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.6rem; }
 .tl-content p  { font-size: 0.9rem; line-height: 1.75; color: rgba(255,255,255,0.4); max-width: 480px; }
 
 /* ─────────────────────────────────────────────────
@@ -427,7 +427,7 @@
   margin-bottom: 0.25rem;
 }
 .value-icon svg { width: 1.6rem; height: 1.6rem; }
-.value-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #000; }
+.value-title { font-family: 'Alumni Sans', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #000; }
 .value-desc  { font-size: 0.87rem; line-height: 1.75; color: #666; flex: 1; }
 .value-card-line { height: 1px; background: #ebebeb; width: 36px; }
 
@@ -450,13 +450,13 @@
 
 .world-stat span {
   display: block;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(3.2rem, 6vw, 5.5rem);
   font-weight: 400; letter-spacing: 1px; color: #fff; line-height: 1;
 }
 .world-stat label {
   display: block;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 0.7rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em;
   color: rgba(255,255,255,0.3);
@@ -477,7 +477,7 @@
 @media (max-width: 768px) { .about-cta-inner { grid-template-columns: 1fr; gap: 3rem; } }
 
 .about-cta-text h2 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 400; text-transform: uppercase;
   letter-spacing: 1px; line-height: 0.95;

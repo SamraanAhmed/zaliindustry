@@ -262,7 +262,7 @@
 
 .mob-scroller__tag {
   display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -275,7 +275,7 @@
 }
 
 .mob-scroller__name {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 24px;
   color: #fff;
   line-height: 1;
@@ -284,7 +284,7 @@
 }
 
 .mob-scroller__cta {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;

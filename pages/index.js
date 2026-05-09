@@ -258,131 +258,180 @@ export default function Home() {
                 <p className="section-label" style={{ color: 'rgba(255,255,255,.3)' }}>
                   Production
                 </p>
-                <h2 className="section-title light reveal">How It Works</h2>
+                <h2 className="section-title light reveal">How It Works Basic</h2>
                 <p className="section-sub light reveal delay-1">From your first sketch to the final shipment — we manage the entire production cycle in-house. No middlemen. No guesswork.</p>
               </div>
             </div>
-            <div className="process-grid">
-              <div className="process-step reveal">
-                <span className="process-num">01</span>
-                <div className="process-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" strokeWidth="1.5">
-                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
+          </div>
+          
+          <div className="process-track-wrapper">
+            <div className="process-track">
+              <div className="process-grid">
+                <div className="process-step">
+                  <span className="process-num">01</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Send Your Brief</div>
+                  <p className="process-desc">Share design files, tech packs, or brand references. No brief is too early — we work with what you have.</p>
                 </div>
-                <div className="process-title">Send Your Brief</div>
-                <p className="process-desc">Share design files, tech packs, or brand references. No brief is too early — we work with what you have.</p>
+                <div className="process-step">
+                  <span className="process-num">02</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Mockup & Sample</div>
+                  <p className="process-desc">Digital mockups within 48 hours. Physical pre-production samples available before any bulk order is confirmed.</p>
+                </div>
+                <div className="process-step">
+                  <span className="process-num">03</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                    </svg>
+                  </div>
+                  <div className="process-title">In-House Production</div>
+                  <p className="process-desc">Manufactured entirely in our Sialkot facility — sublimation printed, cut, stitched, and QC inspected under one roof.</p>
+                </div>
+                <div className="process-step">
+                  <span className="process-num">04</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Shipped Worldwide</div>
+                  <p className="process-desc">Direct to the US, UK, EU, and beyond. Tracked, packaged to your spec, and retail-ready from day one.</p>
+                </div>
               </div>
-              <div className="process-step reveal delay-1">
-                <span className="process-num">02</span>
-                <div className="process-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" strokeWidth="1.5">
-                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                    <path d="M8 21h8M12 17v4" />
-                  </svg>
+
+              {/* Duplicate for infinite effect */}
+              <div className="process-grid duplicate" aria-hidden="true">
+                <div className="process-step">
+                  <span className="process-num">01</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Send Your Brief</div>
+                  <p className="process-desc">Share design files, tech packs, or brand references. No brief is too early — we work with what you have.</p>
                 </div>
-                <div className="process-title">Mockup & Sample</div>
-                <p className="process-desc">Digital mockups within 48 hours. Physical pre-production samples available before any bulk order is confirmed.</p>
-              </div>
-              <div className="process-step reveal delay-2">
-                <span className="process-num">03</span>
-                <div className="process-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
-                  </svg>
+                <div className="process-step">
+                  <span className="process-num">02</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Mockup & Sample</div>
+                  <p className="process-desc">Digital mockups within 48 hours. Physical pre-production samples available before any bulk order is confirmed.</p>
                 </div>
-                <div className="process-title">In-House Production</div>
-                <p className="process-desc">Manufactured entirely in our Sialkot facility — sublimation printed, cut, stitched, and QC inspected under one roof.</p>
-              </div>
-              <div className="process-step reveal delay-3">
-                <span className="process-num">04</span>
-                <div className="process-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                  </svg>
+                <div className="process-step">
+                  <span className="process-num">03</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                    </svg>
+                  </div>
+                  <div className="process-title">In-House Production</div>
+                  <p className="process-desc">Manufactured entirely in our Sialkot facility — sublimation printed, cut, stitched, and QC inspected under one roof.</p>
                 </div>
-                <div className="process-title">Shipped Worldwide</div>
-                <p className="process-desc">Direct to the US, UK, EU, and beyond. Tracked, packaged to your spec, and retail-ready from day one.</p>
+                <div className="process-step">
+                  <span className="process-num">04</span>
+                  <div className="process-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255)" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                    </svg>
+                  </div>
+                  <div className="process-title">Shipped Worldwide</div>
+                  <p className="process-desc">Direct to the US, UK, EU, and beyond. Tracked, packaged to your spec, and retail-ready from day one.</p>
+                </div>
               </div>
             </div>
-            <div className="section-footer-link">
+          </div>
+
+          <div className="container-new">
+            <div className="section-footer-link" style={{ marginTop: '48px' }}>
               <Link href="/how-it-works-brands" className="btn-ghost-new reveal" style={{ color: 'rgba(255,255,255,.4)', borderColor: 'rgba(255,255,255,.15)' }}>
-                Full Process →
+                Detailed Process →
               </Link>
             </div>
           </div>
         </section>
  
-        {/* CUSTOM + PRINT */}
+        {/* MANUFACTURING */}
         <section className="section-new">
           <div className="container-new two-col">
-            <div>
-              <p className="section-label reveal">Manufacturing</p>
-              <h2 className="section-title reveal delay-1">Fully Built to Your Spec</h2>
-              <p className="section-sub reveal delay-2">We don't sell off-the-shelf. Every garment is made to order — your design, your labels, your packaging. OEM and white-label production available.</p>
-              <div className="custom-features reveal delay-3">
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <circle cx="6" cy="6" r="3" />
-                      <circle cx="6" cy="18" r="3" />
-                      <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">Custom Patterns & Technical Cuts</span>
+            <div style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+              <p className="section-label reveal" style={{ justifyContent: 'flex-start' }}>Manufacturing</p>
+              <h2 className="section-title reveal delay-1" style={{ textAlign: 'left' }}>Fully Built to Your Spec</h2>
+              <p className="section-sub reveal delay-2" style={{ textAlign: 'left', marginLeft: '0', maxWidth: '100%' }}>We don't sell off-the-shelf. Every garment is made to order — your design, your labels, your packaging. OEM and white-label production available.</p>
+              <Link href="/how-it-works" className="btn-primary-new reveal delay-3" style={{ marginTop: '24px' }}>View Full Workflow</Link>
+            </div>
+            <div className="custom-features reveal delay-3">
+              <div className="custom-feature">
+                <div className="feat-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
+                    <circle cx="6" cy="6" r="3" />
+                    <circle cx="6" cy="18" r="3" />
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+                  </svg>
                 </div>
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08" />
-                      <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 00-3-3.02z" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">Flatlock, Overlock & Bonded Stitching</span>
+                <span className="feat-text">Custom Patterns & Technical Cuts</span>
+              </div>
+              <div className="custom-feature">
+                <div className="feat-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
+                    <path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08" />
+                    <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 00-3-3.02z" />
+                  </svg>
                 </div>
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
-                      <line x1="7" y1="7" x2="7.01" y2="7" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">Woven Labels, Neck Labels & Hang Tags</span>
+                <span className="feat-text">Flatlock, Overlock & Bonded Stitching</span>
+              </div>
+              <div className="custom-feature">
+                <div className="feat-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+                    <line x1="7" y1="7" x2="7.01" y2="7" />
+                  </svg>
                 </div>
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">Retail-Ready Custom Packaging</span>
+                <span className="feat-text">Woven Labels, Neck Labels & Tags</span>
+              </div>
+              <div className="custom-feature">
+                <div className="feat-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
+                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                  </svg>
                 </div>
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <path d="M3 9h18M9 21V9" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">White-Label & OEM Production</span>
-                </div>
-                <div className="custom-feature">
-                  <div className="feat-icon">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="1.5">
-                      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                      <polyline points="16 7 22 7 22 13" />
-                    </svg>
-                  </div>
-                  <span className="feat-text">MOQ-Friendly for Growing Brands</span>
-                </div>
+                <span className="feat-text">Retail-Ready Custom Packaging</span>
               </div>
             </div>
-            <div>
-              <p className="section-label reveal">Print Technologies</p>
-              <h2 className="section-title reveal delay-1">Our Print Methods</h2>
-              <p className="section-sub reveal delay-2">Five production methods, one facility. We recommend what works best for your fabric, design, and volume.</p>
+          </div>
+        </section>
+
+        {/* PRINT TECHNOLOGIES */}
+        <section className="section-new" style={{ borderTop: '1px solid #E5E5E2' }}>
+          <div className="container-new two-col">
+            <div style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+              <p className="section-label reveal" style={{ justifyContent: 'flex-start' }}>Print Technologies</p>
+              <h2 className="section-title reveal delay-1" style={{ textAlign: 'left' }}>Our Print Methods</h2>
+              <p className="section-sub reveal delay-2" style={{ textAlign: 'left', marginLeft: '0' }}>Five production methods, one facility. We recommend what works best for your fabric, design, and volume.</p>
+              <div className="reveal delay-3" style={{ marginTop: '24px' }}>
+                <Link href="/how-it-works/printing" className="btn-secondary-new">Printing Guide</Link>
+              </div>
+            </div>
+            <div style={{ alignSelf: 'center', width: '100%' }}>
               <PrintMethodsCarousel />
             </div>
           </div>
@@ -391,29 +440,29 @@ export default function Home() {
         {/* FABRIC */}
         <section className="section-new fabric-section">
           <div className="container-new two-col">
-            <div>
-              <p className="section-label reveal">Materials</p>
+            <div style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+              <p className="section-label reveal" style={{ justifyContent: 'flex-start' }}>Materials</p>
               <Link href="/fabrics" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <h2 className="section-title hover-link reveal delay-1" style={{ cursor: 'pointer' }}>Fabric Engineering</h2>
+                <h2 className="section-title hover-link reveal delay-1" style={{ cursor: 'pointer', textAlign: 'left' }}>Fabric Engineering</h2>
               </Link>
-              <p className="section-sub reveal delay-2">
+              <p className="section-sub reveal delay-2" style={{ textAlign: 'left', marginLeft: '0' }}>
                 Every fabric tested for print compatibility, stretch recovery, and durability. We carry options across different GSM weights, eco-certified materials, and specialty blends.
               </p>
               
-              <div className="fabric-explore reveal delay-3" style={{ marginTop: '0', padding: '24px', flexWrap: 'wrap' }}>
-                <div style={{ width: '100%' }}>
-                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#6B6B68', marginBottom: '8px' }}>Fabric Sourcing</p>
-                  <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '24px', color: '#0A0A0A', lineHeight: 1, marginBottom: '8px' }}>Not Sure Which Fabric Is Right?</h3>
-                  <p style={{ fontSize: '13px', color: '#6B6B68', lineHeight: 1.7 }}>Get in touch and we'll match the right fabric to your product and print method.</p>
+              <div className="fabric-explore reveal delay-3" style={{ marginTop: '32px', padding: '32px' }}>
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                  <p className="section-label" style={{ color: '#6B6B68', marginBottom: '12px', justifyContent: 'center' }}>Fabric Sourcing</p>
+                  <h3 style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '28px', color: '#0A0A0A', lineHeight: 1, marginBottom: '12px' }}>Not Sure Which Fabric Is Right?</h3>
+                  <p style={{ fontSize: '15px', color: '#6B6B68', lineHeight: 1.7, maxWidth: '600px', margin: '0 auto' }}>Get in touch and we'll match the right fabric to your product and print method.</p>
                 </div>
-                <div className="fabric-explore-btns" style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: '10px', marginTop: '16px' }}>
+                <div className="fabric-explore-btns" style={{ marginTop: '24px' }}>
                   <Link href="/fabrics" className="btn-primary-new">Explore Fabrics</Link>
                   <Link href="/contact" className="btn-secondary-new">Request Samples</Link>
                 </div>
               </div>
             </div>
             
-            <div style={{ alignSelf: 'center' }}>
+            <div style={{ alignSelf: 'center', width: '100%' }}>
               <FabricsCarousel />
             </div>
           </div>
@@ -423,59 +472,60 @@ export default function Home() {
         <section className="section-new testimonials-section">
           <div className="container-new">
             <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-              <p className="section-label" style={{ color: 'rgba(255,255,255,.3)' }}>
+              <p className="section-label" style={{ color: 'rgba(255, 255, 255, 1)' }}>
                 Client Reviews
               </p>
               <h2 className="section-title light reveal">What Our Clients Say</h2>
             </div>
-            <div className="testimonials-track-wrapper">
-              <div className="testimonials-track">
-                <div className="testimonials-grid">
-                  <div className="testimonial-card reveal">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Jake T.</div>
-                    <div className="t-role">Fight Wear Brand Owner — California, USA</div>
-                  </div>
-                  <div className="testimonial-card reveal delay-1">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Coach Marcus R.</div>
-                    <div className="t-role">Basketball Program — Hawaii, USA</div>
-                  </div>
-                  <div className="testimonial-card reveal delay-2">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Sophie L.</div>
-                    <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
-                  </div>
+          </div> {/* End container-new */}
+          
+          <div className="testimonials-track-wrapper">
+            <div className="testimonials-track">
+              <div className="testimonials-grid">
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Jake T.</div>
+                  <div className="t-role">Fight Wear Brand Owner — California, USA</div>
                 </div>
-                
-                <div className="testimonials-grid duplicate" aria-hidden="true">
-                  <div className="testimonial-card">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Jake T.</div>
-                    <div className="t-role">Fight Wear Brand Owner — California, USA</div>
-                  </div>
-                  <div className="testimonial-card">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Coach Marcus R.</div>
-                    <div className="t-role">Basketball Program — Hawaii, USA</div>
-                  </div>
-                  <div className="testimonial-card">
-                    <div className="t-quote">"</div>
-                    <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
-                    <div className="t-divider"></div>
-                    <div className="t-name">Sophie L.</div>
-                    <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
-                  </div>
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Coach Marcus R.</div>
+                  <div className="t-role">Basketball Program — Hawaii, USA</div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Sophie L.</div>
+                  <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
+                </div>
+              </div>
+              
+              <div className="testimonials-grid duplicate" aria-hidden="true">
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">ZALI handles our entire fight wear line — rashguards, spats, MMA shorts. The sublimation quality is consistent batch after batch, which is everything when you're scaling a brand.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Jake T.</div>
+                  <div className="t-role">Fight Wear Brand Owner — California, USA</div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">First time sourcing overseas and ZALI made it easy. Samples arrived in under two weeks, the bulk order was flawless, and the packaging was retail-ready. We'll be back every season.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Coach Marcus R.</div>
+                  <div className="t-role">Basketball Program — Hawaii, USA</div>
+                </div>
+                <div className="testimonial-card">
+                  <div className="t-quote">"</div>
+                  <p className="t-text">Fast turnaround, clean communication, and the quality holds up. We've been running their boardshorts through our shop for two seasons. No complaints — just reorders.</p>
+                  <div className="t-divider"></div>
+                  <div className="t-name">Sophie L.</div>
+                  <div className="t-role">Surf & Skate Retailer — United Kingdom</div>
                 </div>
               </div>
             </div>
@@ -496,7 +546,7 @@ export default function Home() {
                   speed={80}
                   direction="left"
                   logoHeight={40}
-                  gap={60}
+                  gap={120}
                   hoverSpeed={20}
                   scaleOnHover
                   fadeOut

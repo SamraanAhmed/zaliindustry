@@ -46,7 +46,7 @@ export default function HowItWorksDetail() {
   if (!type || !howItWorksData[type]) {
     return (
       <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0E0E0C', color: '#fff' }}>
-        <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: '0.1em' }}>LOADING DOCUMENTATION...</p>
+        <p style={{ fontFamily: "'Alumni Sans', sans-serif", letterSpacing: '0.1em' }}>LOADING DOCUMENTATION...</p>
       </div>
     );
   }
@@ -112,10 +112,10 @@ export default function HowItWorksDetail() {
                 
                 {data.minOrderInfo && (
                   <div style={{ marginTop: '24px' }}>
-                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text-secondary, #6B6B68)', marginBottom: '14px' }}>
+                    <p style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text-secondary, #6B6B68)', marginBottom: '14px' }}>
                       {data.minOrderInfo.label}
                     </p>
-                    <p style={{ fontSize: '32px', fontFamily: "'Bebas Neue', sans-serif", color: 'var(--black, #000)' }}>
+                    <p style={{ fontSize: '32px', fontFamily: "'Alumni Sans', sans-serif", color: 'var(--black, #000)' }}>
                       {data.minOrderInfo.title}
                     </p>
                     <p style={{ fontSize: '13px', color: 'var(--text-secondary, #6B6B68)', marginTop: '6px' }}>
@@ -127,10 +127,10 @@ export default function HowItWorksDetail() {
               
               <div className="hiw-sidebar">
                 <div className="hiw-cta-box">
-                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.35)', marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.35)', marginBottom: '12px' }}>
                     {data.sidebar.eyebrow}
                   </p>
-                  <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '28px', color: '#fff', lineHeight: 1, marginBottom: '16px' }}>
+                  <h3 style={{ fontFamily: "'Alumni Sans', sans-serif", fontSize: '28px', color: '#fff', lineHeight: 1, marginBottom: '16px' }}>
                     {data.sidebar.title}
                   </h3>
                   <p style={{ fontSize: '13px', color: 'rgba(255,255,255,.45)', marginBottom: '24px', lineHeight: 1.7 }}>

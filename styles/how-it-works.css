@@ -27,7 +27,7 @@
   background: rgba(255,255,255,0.08);
 }
 .page-hero-eyebrow {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -113,7 +113,7 @@
   color: #fff;
 }
 .page-hero h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(42px, 5.5vw, 84px);
   line-height: 0.95;
   color: #fff;
@@ -129,7 +129,7 @@
 .section { padding: 96px 80px; }
 .container { max-width: 1400px; margin: 0 auto; }
 .section-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -147,7 +147,7 @@
   background: currentColor;
 }
 .section-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: clamp(36px, 3.5vw, 52px);
   line-height: 1;
   color: var(--black, #000);
@@ -183,14 +183,14 @@
   padding-left: 10px;
 }
 .step-num {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 36px;
   color: var(--mid-gray, #C8C8C6);
   line-height: 1;
   padding-top: 4px;
 }
 .step-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -225,7 +225,7 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -249,7 +249,7 @@
 }
 .faq-q {
   padding: 18px 0;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -295,7 +295,7 @@
   margin-top: 24px;
 }
 .moq-table th {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -320,7 +320,7 @@
   padding: 14px 32px;
   text-decoration: none;
   display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;

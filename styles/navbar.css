@@ -72,11 +72,11 @@
 }
 
 .nav-pill-link {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 900;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.03em;
   color: #222222;
   transition: all 0.3s;
   display: flex;
@@ -127,8 +127,8 @@
 .dropdown-menu-link {
   display: block;
   padding: 12px 20px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -292,7 +292,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -351,7 +351,7 @@
 }
 
 .mobile-accordion-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -411,7 +411,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Alumni Sans', sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
