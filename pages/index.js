@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import React from 'react';
 import Link from 'next/link';
+import { FaChevronDown } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import ProductCard from '../components/ProductCard';
@@ -131,7 +132,41 @@ const FabricsCarousel = () => {
 };
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 3); // Based on original index.js
+  const featuredProducts = products.slice(0, 3);
+  const [processDropdownOpen, setProcessDropdownOpen] = useState(false);
+  const processDropdownRef = useRef(null);
+  const dropdownTimeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setProcessDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setProcessDropdownOpen(false);
+    }, 300);
+  };
+
+  const HOW_IT_WORKS_LINKS = [
+    { label: "For Suppliers", href: "/how-it-works/suppliers" },
+    { label: "For Brands", href: "/how-it-works/brands" },
+    { label: "For Teams", href: "/how-it-works/teams" },
+  ];
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (processDropdownRef.current && !processDropdownRef.current.contains(event.target)) {
+        setProcessDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    };
+  }, []);
 
 
 
@@ -363,9 +398,39 @@ export default function Home() {
 
           <div className="container-new">
             <div className="section-footer-link" style={{ marginTop: '48px' }}>
-              <Link href="/how-it-works-brands" className="btn-ghost-new reveal" style={{ color: 'rgba(255,255,255,.4)', borderColor: 'rgba(255,255,255,.15)' }}>
-                Detailed Process →
-              </Link>
+              <div 
+                className="dropdown-relative" 
+                ref={processDropdownRef}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button 
+                  className="btn-ghost-new reveal" 
+                  style={{ 
+                    color: 'rgba(255,255,255,.4)', 
+                    borderColor: 'rgba(255,255,255,.15)',
+                    background: 'transparent',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Detailed Process 
+                  <FaChevronDown size={10} style={{ marginLeft: '8px', transition: 'transform 0.3s', transform: processDropdownOpen ? 'rotate(180deg)' : 'none' }} />
+                </button>
+                
+                <div className={`dropdown-menu-container ${processDropdownOpen ? 'open' : 'closed'}`} style={{ bottom: '100%', top: 'auto', marginBottom: '10px', right: 0 }}>
+                  <div style={{ padding: '0.25rem 0' }}>
+                    {HOW_IT_WORKS_LINKS.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="dropdown-menu-link"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
